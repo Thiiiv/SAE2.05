@@ -6,8 +6,6 @@
         min-height: 100%;
       }
       
-      /* Add some content at the bottom of the video/page */
-    .content {
         position: fixed;
         top : 0;
         left: 0;
@@ -32,5 +30,4 @@
         width: 30px;
         transition-duration: 0.4s;
         cursor: pointer;
-
     }
