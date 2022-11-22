@@ -11,7 +11,11 @@ Liens images/images :
 https://we.tl/t-xGbbhWDbpe
 
 
-Bob47892
-AdrienB23
+
 https://cahier-de-prepa.fr/psi-michelet/download?id=200
 
+if lettre in string.ascii_lowercase:
+            b=ord(lettre)+cle
+            while b >= ord('a')+26:
+                b -= 26
+            return chr(b)
