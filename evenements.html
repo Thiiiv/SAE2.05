@@ -13,8 +13,12 @@
     <link rel="shotcut icon" href="data/image/favicon.png">
     <style>
 
+        h3 {
+            font-size: xx-large;
+        }
+
         h1{
-            margin-top: 10vh;
+            margin-top: 15vh;
             text-align: center;
             width: 100%;
             margin-bottom: 5vh;
@@ -32,15 +36,59 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            padding: 1%;
         }
 
         .boite {
             margin:8vh;
             border:1px solid #ea5c0d;
-            height:17vh;
-            width: 15vw;
+            height:25vh;
+            width: 20vw;
+            transition: 0.5s;
+            display: block;
+            overflow: hidden;
+            position: relative;
         }
     
+        .photoevent {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 5px;
+        }
+
+        .boite:hover {     
+            transform: scale(1.6);
+            z-index:2;
+        }
+
+        .photoevent:hover{
+            opacity: 0.4;
+            transition: 0.5s;
+        }
+
+        .boite .texteevent {
+            position: absolute;
+            top:0;
+            left:0;
+            display: flex;
+            opacity: 0;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            transition: opacity 0.30s;
+
+        }
+
+        .boite:hover .texteevent {
+            opacity: 1;
+            cursor:pointer;
+            user-select: none;
+        }
+
+        
 
     </style>
 </head>
@@ -76,39 +124,46 @@
     <div class="flexboxrow">
         <div class="flexboxcol">
             <h3>Concours</h3>
-            <div class="boite">
+                <div class="boite">
+                    <img class="photoevent" src="data/image/fetesaine.jpg">
+        
+                <div class="texteevent">
+                <h4>Fête saine</h4>
+                <p>La Fête Sainte est une fête qui commémore la Passion du Christ. Durant cette semaine la population manifeste publiquement sa foi. Sous la faible lumière des cierges portés par les pénitents, les processions parcourent la ville en laissant sur leur passage une odeur d’encens. La Semaine Sainte à Cordoue est l'un des événements religieux les plus importants de l'année en Espagne. Elle a lieu chaque année pendant la semaine qui précède Pâques et est célébrée principalement par les catholiques. Les processions et les cérémonies religieuses sont les moments clés de cet événement, qui attire des milliers de visiteurs chaque année. Les processions les plus importantes ont lieu le Vendredi Saint et le dimanche de Pâques. Les groupes de penitents en robe blanche et capuchon noir, les confréries, portant des croix et des statues de la Vierge et de Jésus sont les plus remarquables. Les cérémonies religieuses se déroulent également dans les églises de la ville, où des messes et des offices sont célébrés tout au long de la semaine.
+                </div>
 
             </div>
+
             <div class="boite">
-                
             </div>
             <div class="boite">
-                
             </div>
+
         </div>
+
         <div class="flexboxcol">
             <h3>Festivaux</h3>
             <div class="boite">
-                
             </div>
+
             <div class="boite">
-                
             </div>
+
             <div class="boite">
-                
             </div>
+
         </div>
         <div class="flexboxcol">
             <h3>Concerts</h3>
             <div class="boite">
-                
             </div>
+
             <div class="boite">
-                
             </div>
+
             <div class="boite">
-                
             </div>
+            
         </div>
     </div>
 
