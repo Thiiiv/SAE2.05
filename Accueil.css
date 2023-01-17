@@ -184,6 +184,22 @@ button:hover {
 	height: auto;
     background: #b94503;
 }
+.page-content .carte {
+    text-align: center;
+    padding-top: 1.5vh;
+}
+
+.page-content .itineraire {
+    text-align: center;
+}
+.page-content .itineraire .depart {
+    border-radius: 5px;
+}
+.page-content .itineraire .recherche {
+    border-radius: 5px;
+    font-family: 'Dyno', sans-serif;
+}
+
 
 #myVideo {
     left: 0;
@@ -233,13 +249,17 @@ footer .colonne p:hover {
 		margin-top: 10%;
 		max-width: 100%;
 	}
-
+    footer .colonne a {
+        width: 5px;
+    }
 	footer {
-		justify-content: flex-start;
+		justify-content: center;
+        width: 100%;
+
 	}
 
-	footer .column {
-		width: 80%;
+	footer .colonne {
+        flex-grow: 1;
 	}
 
     .content {
