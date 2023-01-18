@@ -35,11 +35,10 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            padding: 1%;
         }
 
         .boite {
-            margin: 8vh;
+            margin: 5vw;
             border: 5px solid #585858;
             height: 35vh;
             width: 30vw;
@@ -81,13 +80,13 @@
 
         }
 
-        .boite:hover .texteevent {
+        .boite:hover .texteevent, .boite:active .texteevent {
             opacity: 1;
             cursor: pointer;
             user-select: none;
         }
 
-        .boite:hover .photoevent {
+        .boite:hover .photoevent, .boite:active .photoevent {
             opacity: 0.4;
         }
 
@@ -100,6 +99,19 @@
             font-size: larger;
             padding-bottom: 5vh;
         }
+
+        @media screen and (max-width:900px) {
+            .boite {
+            height: 50vh;
+            width: 75vw;
+            }
+
+            .flexboxrow {
+            flex-direction: column;
+            }
+
+        }
+
     </style>
 </head>
 
@@ -139,11 +151,10 @@
                     <h4 class="titreevent">Fête sainte</h4>
                     <h4 class="soustitreevent">Fête annuelle, en début Avril</h4>
                     <p>Spectacle coloré qui célèbre la culture et la religion de la ville. La célébration commence par
-                        un cortège des principales figures religieuses de la ville, accompagnées par des fanfares et des
+                        un cortège des principales figures religieuses de la ville, accompagnées par des
                         spectacles de musique et de danse. Le cortège se dirige ensuite vers la cathédrale où les gens
-                        peuvent admirer les plus belles statues et objets religieux. Une fois la procession terminée,
-                        des spectacles de musique et de danse s'ensuivent dans les rues de la ville. La fête se termine
-                        par une grande procession qui traverse la ville et se termine à la cathédrale.
+                        peuvent admirer les statues et objets religieux. A la fin,
+                        des spectacles de musique et de danse s'ensuivent dans les rues de la ville.
                     </p>
                 </div>
             </div>
