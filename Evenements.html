@@ -12,83 +12,91 @@
     <link rel="stylesheet" href="Accueil.css" />
     <link rel="shotcut icon" href="data/image/favicon.png">
     <style>
-
         h3 {
-            font-size: xx-large;
-        }
+    font-size: xx-large;
+}
+h1{
+    margin-top: 15vh;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5vh;
+}
 
-        h1{
-            margin-top: 15vh;
-            text-align: center;
-            width: 100%;
-            margin-bottom: 5vh;
-        }
+.flexboxrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
 
-        .flexboxrow {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row;
-        }
+.flexboxcol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1%;
+}
 
-        .flexboxcol {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: 1%;
-        }
+.boite {
+    margin:8vh;
+    border:5px solid #585858;
+    height: 35vh;
+    width: 30vw;
+    transition: 0.5s;
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
 
-        .boite {
-            margin:8vh;
-            border:1px solid #ea5c0d;
-            height: 35vh;
-            width: 30vw;
-            transition: 0.5s;
-            display: block;
-            overflow: hidden;
-            position: relative;
-        }
-    
-        .photoevent {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            border-radius: 5px;
-        }
+.photoevent {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+}
 
-        .boite:hover {     
-            transform: scale(1.6);
-            z-index:2;
-        }
+.boite:hover {     
+    transform: scale(1.6);
+    z-index:2;
+}
 
-        .photoevent:hover{
-            opacity: 0.4;
-            transition: 0.5s;
-        }
+.photoevent:hover{
+    transition: 0.5s;
+    opacity: 0.2;
+}
+.boite .texteevent {
+    position: absolute;
+    top:0;
+    left:0;
+    display: flex;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-size:large;
 
-        .boite .texteevent {
-            position: absolute;
-            top:0;
-            left:0;
-            display: flex;
-            opacity: 0;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            flex-direction: column;
-            transition: opacity 0.30s;
+}
 
-        }
+.boite:hover .texteevent {
+    opacity: 1;
+    cursor:pointer;
+    user-select: none;
+}
+.boite:hover .photoevent {
+    opacity: 0.4;
+}
 
-        .boite:hover .texteevent {
-            opacity: 1;
-            cursor:pointer;
-            user-select: none;
-        }
+.titreevent {
+    font-size: xx-large;
+    padding-top: 5vh;
+}
 
-        
+.soustitreevent {
+    font-size:larger;
+    padding-bottom: 5vh;
+}
 
     </style>
 </head>
@@ -123,22 +131,26 @@
 
     <div class="flexboxrow">
         <div class="flexboxcol">
-                <div class="boite">
-                    <img class="photoevent" src="data/image/fetesaine.jpg">
-                    <div class="texteevent">
-                    <h4>Fête saine</h4>
-                    <p>La Fête Sainte est une fête qui commémore la Passion du Christ. Durant cette semaine la population manifeste publiquement sa foi. Sous la faible lumière des cierges portés par les pénitents, les processions parcourent la ville en laissant sur leur passage une odeur d’encens. La Semaine Sainte à Cordoue est l'un des événements religieux les plus importants de l'année en Espagne. Elle a lieu chaque année pendant la semaine qui précède Pâques et est célébrée principalement par les catholiques. Les processions et les cérémonies religieuses sont les moments clés de cet événement, qui attire des milliers de visiteurs chaque année. Les processions les plus importantes ont lieu le Vendredi Saint et le dimanche de Pâques. Les groupes de penitents en robe blanche et capuchon noir, les confréries, portant des croix et des statues de la Vierge et de Jésus sont les plus remarquables. Les cérémonies religieuses se déroulent également dans les églises de la ville, où des messes et des offices sont célébrés tout au long de la semaine.
-                    </div>
+            <div class="boite">
+                <img class="photoevent" src="data/image/fetesaine.jpg">
+                <div class="texteevent">
+                    <h4 class="titreevent">Fête sainte</h4>
+                    <h4 class="soustitreevent">Fête annuelle, en début Avril</h4>
+                    <p>Spectacle coloré qui célèbre la culture et la religion de la ville. La célébration commence par un cortège des principales figures religieuses de la ville, accompagnées par des fanfares et des spectacles de musique et de danse. Le cortège se dirige ensuite vers la cathédrale où les gens peuvent admirer les plus belles statues et objets religieux. Une fois la procession terminée, des spectacles de musique et de danse s'ensuivent dans les rues de la ville. La fête se termine par une grande procession qui traverse la ville et se termine à la cathédrale.   
+                    </p>
                 </div>
+            </div>
 
                 
             <div class="boite">
                 <img class="photoevent" src="data/image/patios.jpg">
                 <div class="texteevent">
-                <h4>Fête des patios</h4>
-                <p>La Fête des Patios de Cordoue est un événement annuel qui a lieu chaque année en mai. Il s'agit d'un concours de décoration de patios, ou cours intérieures, qui ont lieu dans les quartiers historiques de la ville. Les résidents ouvrent leurs patios aux visiteurs et rivalisent pour remporter des prix pour les meilleurs décors. Les patios sont décorés avec des fleurs, des plantes, des arcs en treillis et des bancs, créant des espaces colorés et accueillants. Les visiteurs peuvent se promener dans les rues et admirer les patios, tout en découvrant l'architecture et la culture de Cordoue. Il y a également des concerts et des spectacles de danse qui ont lieu dans les patios pendant la fête. La fête des patios est considérée comme l'un des événements les plus importants de l'année à Cordoue, et attire des milliers de visiteurs chaque année.  </div>
-                </p>
-                    </div>
+                    <h4 class="titreevent">Fête des patios</h4>
+                    <h4 class="soustitreevent">Fête annuelle, en mi-Mai</h4>
+                    <p>Concours de décoration de patios, ou cours intérieures, qui ont lieu dans les quartiers historiques de la ville. Les patios sont décorés avec des fleurs, des plantes, et des arcs en treillis. créant des espaces colorés et accueillants. La fête des patios est considérée comme l'un des événements les plus importants de l'année à Cordoue.
+                    </p>
+                </div>
+            </div>
 
             <div class="boite">
             </div>
@@ -149,17 +161,20 @@
             <div class="boite">
                 <img class="photoevent" src="data/image/noel.jpg">
                 <div class="texteevent">
-                <h4>Noël</h4>
-                <p>Noël à Cordoue est célébré principalement comme un événement religieux et familial comme en France. Les gens se réunissent généralement avec leur famille et leurs amis pour célébrer la naissance de Jésus. Les églises de la ville organisent des messes et des offices spéciaux pour marquer l'occasion. Les rues de Cordoue sont également décorées avec des lumières et des décorations pour créer une ambiance festive. Les marchés de Noël sont également organisés dans la ville, où les visiteurs peuvent acheter des cadeaux, des décorations et des spécialités locales. Malgré tout, il est intéressant de noter les patios qui sont très bien décorés à cette période de l’année.
-                </p>
+                    <h4 class="titreevent">Noël</h4>
+                    <h4 class="soustitreevent">Fête annuelle, en fin Décembre</h4>
+                    <p>Noël à Cordoue est célébré principalement comme un événement religieux et familial. Les gens se réunissent généralement avec leur famille et leurs amis pour célébrer la naissance de Jésus. Les rues de Cordoue sont décorées avec des lumières et des décorations, les marchés de Noël sont organisés dans la ville, où les visiteurs peuvent acheter des cadeaux, des décorations et des spécialités locales.</p>
+                    </p>
                 </div>
             </div>
 
             <div class="boite">
                 <img class="photoevent" src="data/image/cruces.jpg">
                 <div class="texteevent">
-                <h4>Croix de mai</h4>
-                <p>La fête populaire des Croix de mai de Cordoue consiste à installer, dans les rues et sur les places de la ville, des croix faites de fleurs. Ces créations participent, en outre, à un concours organisé par la municipalité. </p>
+                    <h4 class="titreevent">Croix de Mai</h4>
+                    <h4 class="soustitreevent">Fête annuelle, en fin Avril</h4>
+                    <p>Cette fête consiste à installer dans les rues et sur les places de la ville, des croix faites de fleurs. Ces créations participent, en outre, à un concours organisé par la municipalité. Il s'agit d'une ancienne tradition religieuse. Ce sont les associations de quartier et les différents cercles qui sont chargés de faire de Cordoue un tableau de couleurs et de fête. Les croix sont exposées toute la journée, et le soir l'ambiance est assurée par des spectacles de musique et de danse
+                </p>
                 </div>
             </div>
 
