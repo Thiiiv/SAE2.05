@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cordoba</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Style.css" />
+    <link rel="shotcut icon" href="data/image/favicon.png">
+    <style>
+        h3 {
+            font-size: xx-large;
+        }
+
+        h1 {
+            margin-top: 15vh;
+            text-align: center;
+            margin-bottom: 5vh;
+            font-size: 3rem;
+        }
+
+        .flexboxrow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+
+        .flexboxcol {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .boite {
+            margin: 5vw;
+            border: 5px solid #585858;
+            height: 35vh;
+            width: 30vw;
+            transition: 0.5s;
+            display: block;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .photoevent {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 5px;
+        }
+
+        .boite:hover {
+            transform: scale(1.6);
+            z-index: 2;
+        }
+
+        .photoevent:hover {
+            transition: 0.5s;
+            opacity: 0.2;
+        }
+
+        .boite .texteevent {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            opacity: 0;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            font-size: large;
+
+        }
+
+        .boite:hover .texteevent, .boite:active .texteevent {
+            opacity: 1;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .boite:hover .photoevent, .boite:active .photoevent {
+            opacity: 0.4;
+        }
+
+        .titreevent {
+            font-size: xx-large;
+            padding-top: 5vh;
+        }
+
+        .soustitreevent {
+            font-size: larger;
+            padding-bottom: 5vh;
+        }
+
+        @media screen and (max-width:900px) {
+            .boite {
+            height:50vh;
+            width: auto;
+            }
+
+            .flexboxrow {
+            flex-direction: column;
+            }
+
+            .boite:hover {
+            transform: scale(1);
+            z-index: 2;
+        }
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#">
+                    <img class="logotype" src="data/image/logo1.png" alt="logo" />
+                </a>
+                <a href="Accueil.html">
+                    <img src="data/image/home.webp" alt="home" />
+                </a>
+            </div>
+            <div class="toggle">
+                <i class="fas fa-bars ouvrir"></i>
+                <i class="fas fa-times fermer"></i>
+            </div>
+            <ul class="menu">
+                <li><a href="monuments.html"><button>Monuments</button></a></li>
+                <li><a href="evenements.html"><button>Events</button></a></li>
+                <li><a href="services.html"><button>Services</button></a></li>
+                <li><a href="carte.html"><button>Map</button></a></li>
+                <li><a href="voyages.html"><button>Travel</button></li>
+                <li><a href="#"><button><img src="data/image/recherche.png" width="30"></button></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Events</h1>
+
+    <div class="flexboxrow">
+        <div class="flexboxcol">
+            <div class="boite">
+                <img class="photoevent" src="data/image/fetesaine.jpg">
+                <div class="texteevent">
+                    <h4 class="titreevent">Holy day</h4>
+                    <h4 class="soustitreevent">Annual festival, at the beginning of April</h4>
+                    <p>Colorful show that celebrates the culture and religion of the city. The celebration begins with
+                        a procession of the main religious figures of the city, accompanied by
+                        music and dance performances. The procession then moves to the cathedral where people can admire
+                        people can admire the statues and religious objects. At the end,
+                        music and dance performances follow in the streets of the city.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="boite">
+                <img class="photoevent" src="data/image/patios.jpg">
+                <div class="texteevent">
+                    <h4 class="titreevent">Patio Festival</h4>
+                    <h4 class="soustitreevent">Annual festival, mid-May</h4>
+                    <p>Competitions for the decoration of patios, or interior courtyards, which take place in the historic
+                        historic districts of the city. The patios are decorated with flowers, plants, and trellis arches.
+                        creating colorful and inviting spaces. The Patio Festival is considered one of the
+                        one of the most important events of the year in Cordoba.
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="flexboxcol">
+            <div class="boite">
+                <img class="photoevent" src="data/image/noel.jpg">
+                <div class="texteevent">
+                    <h4 class="titreevent">Christmas</h4>
+                    <h4 class="soustitreevent">Annual party, at the end of December</h4>
+                    <p>Christmas in Cordoba is celebrated mainly as a religious and family event. People usually
+                        family and friends to celebrate the birth of Jesus. The
+                        streets of Cordoba are decorated with lights and decorations, Christmas markets are organized in the city
+                        organized in the city, where visitors can buy gifts, decorations and local
+                        and local specialties.</p>
+                    </p>
+                </div>
+            </div>
+
+            <div class="boite">
+                <img class="photoevent" src="data/image/cruces.jpg">
+                <div class="texteevent">
+                    <h4 class="titreevent">Cross of May</h4>
+                    <h4 class="soustitreevent">Annual festival, at the end of April</h4>
+                    <p>This festival consists in installing in the streets and squares of the city, crosses made of
+                        flowers. These creations also participate in a competition organized by the municipality. It
+                        It is an ancient religious tradition. It is the neighborhood associations that are responsible
+                        to make Cordoba a picture of color and celebration. The
+                        crosses are exposed all day, and in the evening the atmosphere is provided by shows of
+                        music and dance
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="haut">Back to top ↑</a>
+    <footer>
+        <div class="colonne">
+            <h3>Contact us</h3>
+            <p><a href="contact.html" class="col">Mail</a></p>
+            <p><a href="https://twitter.com/CordoueWeb" class="col">Twitter</a></p>
+        </div>
+        <div class="colonne">
+            <h3>Our School</h3>
+            <p>IUT of Marne-la-Vallée - Gustave Eiffel University</p>
+            <p><a href="https://iut.univ-gustave-eiffel.fr" class="col">Our school's website</a></p>
+        </div>
+        <div class="colonne">
+            <h3>Legal Notice</h3>
+            <p>:copyright: 2022/2023</p>
+            <p><a href='https://whc.unesco.org/fr/etatsparties/fr' class="col">UNESCO</a></p>
+        </div>
+    </footer>
+    <script src="menulateral.js"></script>
+</body>
+</html>
