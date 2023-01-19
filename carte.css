@@ -186,7 +186,7 @@ button:hover {
 }
 .page-content .carte {
     text-align: center;
-    padding-top: 1.5vh;
+    padding-top: 2vh;
 }
 
 .page-content .itineraire {
@@ -319,6 +319,9 @@ footer .colonne p:hover {
 
     .btn {
         font-size: 2rem;
+    }
+    .page-content .carte {
+        margin-top: 10vh;
     }
 
     .open .menu {
