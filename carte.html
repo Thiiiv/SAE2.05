@@ -2,41 +2,71 @@
 <html lang="fr">
 
 <head>
+    <!-- OSEF -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cordoue</title>
+    
+    <title>Carte</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="carte.css" />
+
+    <!-- JS -->
+    <script src="horshtml/barre.js"></script>
+    <script src="horshtml/menulateral.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="horshtml/Style.css" />
+    <link rel="stylesheet" href="horshtml/carte.css" />
     <link rel="shotcut icon" href="data/image/favicon.png">
 </head>
 
 <body>
+    <!-- Barre horizontale -->
     <header>
         <nav>
+            <!-- LOGO -->
             <div class="logo">
-                <a href="#">
-                    <img class="logotype" src="data/image/logo1.png" alt="logo" />
-                </a>
                 <a href="Accueil.html">
-                    <img src="data/image/home.webp" alt="home" />
+                    <img class="logotype" src="data/image/logo.png" alt="logo" />
                 </a>
             </div>
-            <div class="toggle">
-                <i class="fas fa-bars ouvrir"></i>
-                <i class="fas fa-times fermer"></i>
-            </div>
-            <ul class="menu">
+            <!-- Menu responsive -->
+            <div class="container nav-container">
+                <input class="checkbox" type="checkbox" name="" id="check" />
+                <div class="hamburger-lines">
+                  <span class="line line1"></span>
+                  <span class="line line2"></span>
+                  <span class="line line3"></span>
+                </div>  
+              <ul class="menu-items">
+                <li><a href="histoire.html"><button>Histoire</button></a></li>
                 <li><a href="monuments.html"><button>Monuments</button></a></li>
-                <li><a href="evenements.html"><button>Evenements</button></a></li>
-                <li><a href="services.html"><button>Services</button></a></li>
-                <li><a href="carte.html"><button>Cartes</button></a></li>
-                <li><a href="voyages.html"><button>Voyages</button></li>
+                <li><a href="evenements.html"><button>Informations Pratiques</button></a>
+                    <ul>
+                        <li><a href="evenements.html"><button>Evenements</button></a>
+                        </li>
+                        <li><a href="Activite.html"><button>Activités</button></a>
+                        </li>
+                        <li><a href="Voyages.html"><button>Voyages</button></a>
+                        </li>
+                        <li><a href="carte.html"><button>Carte</button></a></li>
+                    </ul>
+                </li>
+                <li><button>Langues</button>
+                    <ul>
+                        <li><a href="ANGAccueil.html"><button><img src="data/image/Eng.webp" width="40"></button></a>
+                        </li>
+                        <li><a href="Accueil.html"><button><img src="data/image/FR.png" width="40"></button></a></li>
+                    </ul>
+                </li>
                 <li><a href="#"><button><img src="data/image/recherche.png" width="30"></button></a></li>
-            </ul>
+              </ul>
+            </div>
+            <!-- Menu -->
         </nav>
+        <div id="barre"></div>
     </header>
     <section class="page-content">
         <section class="carte">
@@ -52,25 +82,36 @@
                 onclick="window.open('http://maps.google.fr/maps?f=d&hl=fr&saddr='+document.iti.depart.value+'&daddr='+document.iti.arrivee.value+'&ie=UTF8&z=12&om=1');" />
         </form>
     </section>
-    <a href="#" class="haut">Retour en haut ↑</a>
-    <footer>
-        <div class="colonne">
-            <h3>Contactez nous</h3>
-            <p><a href="contact.html" class="col">Mail</a></p>
-            <p><a href="https://twitter.com/CordoueWeb" class="col">Twitter</a></p>
+    <!-- Bouton retour en haut -->
+    <a href="#" class="haut"><button class="bouton">Haut ↑</button></a>
+    <!-- Footer -->
+    <div class="footer">
+        <div class="first-part">
+            <div class="lien-utile">
+                <a href="#title-utile" id="title-utile">Liens utiles</a>
+                <br>
+                <a href="https://twitter.com/CordoueWeb"><img src="data/image/twitter.webp" alt="Twitter" id="twitter"></a>
+            </div>
+            <div class="ecole">
+                <a href="#title-ecole" id="title-ecole">Notre école</a>
+                <br>
+                <a href="https://iut.univ-gustave-eiffel.fr/">IUT de Marne-la-Vallée</a>
+            </div>
+            <div class="mention">
+                <a href="#title-mention" id="title-mention">Mentions légales</a>
+                <br>
+                <p>© 2022/2023</p>
+            </div>
         </div>
-        <div class="colonne">
-            <h3>Notre école</h3>
-            <p>IUT de Marne-la-Vallée - Université Gustave Eiffel</p>
-            <p><a href="https://iut.univ-gustave-eiffel.fr" class="col">Site de mon école</a></p>
+        <div class="second-part">
+            <div class="partenaire">
+                <img src="data/image/Univ.png" />
+                <img src="data/image/unsplash.png" />
+                <img src="data/image/pexels.png" />
+                <img src="data/image/unesco_vrai.png" />
+            </div>
         </div>
-        <div class="colonne">
-            <h3>Mentions Légales</h3>
-            <p>© 2022/2023</p>
-            <p><a href='https://whc.unesco.org/fr/etatsparties/fr' class="col">UNESCO</a></p>
-        </div>
-    </footer>
-    <script src="menulateral.js"></script>
+    </div>
 </body>
 
 </html>

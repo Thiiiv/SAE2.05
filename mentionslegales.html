@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- OSEF -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Mentions Légales</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- JS -->
+    <script src="horshtml/barre.js"></script>
+    <script src="horshtml/menulateral.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="horshtml/Style.css" />
+    <link rel="stylesheet" href="horshtml/accueil.css" />
+    <link rel="shotcut icon" href="data/image/favicon.png">
+    <style>
+
+        .flexboxcolonne{ 
+            justify-content: left;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            margin-top: 15vh;
+            margin-bottom: 3vh;
+            padding-top: 5vh;
+            margin-left:10vw;
+            font-size: xx-large;
+        }
+
+        h2 {
+            margin-top: 10vh;
+            margin-bottom: 2vh;
+            margin-left:10vw;
+
+        }
+
+
+
+        .partie {
+            width: 65%;
+            margin-left:12%;
+        }
+
+        .listepartie {
+            justify-content: center;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            margin-left: 23vh;
+        }
+
+        .listepartie li {
+            padding-top: 1vh;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Barre horizontale -->
+    <div id="barre"></div>
+    <header>
+        <nav>
+            <!-- LOGO -->
+            <div class="logo">
+                <a href="Accueil.html">
+                    <img class="logotype" src="data/image/logo.png" alt="logo" />
+                </a>
+            </div>
+            <!-- Menu responsive -->
+            <div class="toggle">
+                <i class="fas fa-bars ouvrir"></i>
+                <i class="fas fa-times fermer"></i>
+            </div>
+            <!-- Menu -->
+            <ul class="menu">
+                <li><a href="monuments.html"><button>Monuments</button></a></li>
+                <li><a href="evenements.html"><button>Evenements</button></a></li>
+                <li><a href="services.html"><button>Services</button></a></li>
+                <li><a href="carte.html"><button>Carte</button></a></li>
+                <li><a href="voyages.html"><button>Voyages</button></a></li>
+                <li><a href="ANGmonuments.html"><button><img src="data/image/Eng.webp" width="40"></button></a></li>
+                <li><a href="#"><button><img src="data/image/recherche.png" width="30"></button></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="flexboxcolonne">
+    <h1>Mentions légales</h1>
+    <hr id="hrtitre">
+
+    <h2>Unesco</h2>
+    <hr class="partie">
+    <ul class="listepartie">
+        <li>Ce site web est un projet en partenariat avec l'UNESCO</li>
+
+    </ul>
+
+
+    <h2>Crédits</h2>
+    <hr class="partie">
+    <ul class="listepartie">
+        <li><a href="https://favicon.io/">Flavicon</a></li>
+        <li><a href="https://twitter.com">Twitter</a> pour l'API</li>
+        <li><a href="https://www.google.fr/maps">Google Maps</a> pour l'API</li>
+
+    </ul>
+
+    <h2>Droits d'auteur</h2>
+    <hr class="partie">
+    <ul class="listepartie">
+        <li>test</li>
+        <li>test</li>
+        <li>test</li>
+    </ul>
+    
+
+
+
+
+    </div>
+    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+
+    <!-- Bouton retour en haut -->
+    <a href="#" class="haut"><button class="bouton">Haut ↑</button></a>
+    <!-- Footer -->
+    <footer>
+        <div class="colonne">
+            <h3>Contactez nous</h3>
+            <p><a href="contact.html" class="col">Mail</a></p>
+            <p><a href="https://twitter.com/CordoueWeb" class="col">Twitter<img src="data/image/twitter.webp" width="30"></a></p>
+        </div>
+        <div class="colonne">
+            <h3>Notre école</h3>
+            <p>IUT de Marne-la-Vallée - Université Gustave Eiffel</p>
+            <p><a href="https://iut.univ-gustave-eiffel.fr" class="col">Site de notre école<img src="data/image/Univ.png" width="30"></a></p>
+        </div>
+        <div class="colonne">
+            <h3>Mentions Légales</h3>
+            <p>© 2022/2023</p>
+            <p><a href='https://whc.unesco.org/fr/etatsparties/fr' class="col">UNESCO<img src="data/image/unesco.png" width="30"></a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

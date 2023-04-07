@@ -2,150 +2,307 @@
 <html lang="fr">
 
 <head>
+    <!-- OSEF -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Monument</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="Style.css" />
+
+    <!-- JS -->
+    <script src="horshtml/barre.js"></script>
+    <script src="horshtml/menulateral.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="horshtml/Style.css" />
+    <link rel="stylesheet" href="horshtml/accueil.css" />
     <link rel="shotcut icon" href="data/image/favicon.png">
-    <title>Monuments</title>
     <style>
+        /* Titre */
         h1 {
             margin-top: 15vh;
             text-align: center;
             width: 100%;
-            margin-bottom: 5vh;
+            padding-top: 5vh;
+            font-size: 100px;
+            user-select: none;
         }
 
-        .monuments {
+        /* Corps de la page (flexbox colonne qui prend les deux lignes)*/
+        .corps {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            margin-top: 25vh;
             background-color: #505050;
         }
 
-        .monuments .monument img {
+        /* Images des monuments */
+        .monument img {
             width: 20vw;
+            height: 20vw;
             margin-top: 5%;
+            object-fit: cover;
+
+            border-radius: 10px 10px 10px 10px;
+            -webkit-border-radius: 10px 10px 10px 10px;
+            -moz-border-radius: 10px 10px 10px 10px;
+            -webkit-box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.75);
+
         }
 
-        .monuments .descriptions p {
+        /* Texte de chaque monument */
+        .ligne-monuments p {
             text-align: left;
             width: 20vw;
-            font-size: 1vw;
+            font-size: 30px;
+            margin-top: 3vh;
         }
 
-        .monuments h3 {
+        /* Titre de chaque monument */
+        h3 {
             text-align: center;
-            font-size: 2vw;
+            font-size: 40px;
         }
 
-        .monuments .monument,
-        .monuments .descriptions {
-            padding: 2vw;
-        }
-
-        .descriptions {
+        /* Ligne de 3 monuments */
+        .ligne-monuments {
             display: flex;
             justify-content: center;
             flex-direction: row;
             margin: 10px 10px;
+            padding-left: 1.5vw;
+            padding-right: 1.5vw;
         }
 
+        /* div avec titre, image, texte du monument, Amène vers une autre page */
         .monument {
             text-align: center;
             display: flex;
             align-items: center;
             flex-direction: column;
+            border: 4px outset #f7af3e;
+            margin: 1vw;
+            color: white;
+            text-decoration: none;
+            padding: 1.5vw;
+            background-color:#3a3a3a;
+            border-radius: 11px 11px 11px 11px;
+            -webkit-border-radius: 11px 11px 11px 11px;
+            -moz-border-radius: 11px 11px 11px 11px;
+            box-shadow: 0px 0px 11px 6px rgba(51, 51, 51, 0.52);
+            -webkit-box-shadow: 0px 0px 11px 6px rgba(51, 51, 51, 0.52);
+            -moz-box-shadow: 0px 0px 11px 6px rgba(51, 51, 51, 0.52);
+            transition: transform 0.2s;
+        }
+
+        /* Agrandissement du div des monuments */
+        .monument:hover {
+            transform: scale(1.08);
+            cursor: pointer;
         }
 
         .monument a {
             position: relative;
             float: right;
         }
+
+        /* Image en dessous du titre */
+        .transition {
+            width: 50vw;
+            height: auto;
+            display: flex;
+            margin-right: auto;
+            margin-left: auto;
+            padding-bottom: 8vh;
+        }
+
+        @media screen and (max-width:901px) {
+            .ligne-monuments {
+                flex-direction: column;
+                width: 90vw;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+
+            .transition {
+                width: 75%;
+                height: 3vh;
+            }
+
+            .monuments .ligne-monuments p {
+                width: 80vw;
+            }
+
+            .monuments .monument img {
+                width: 65vw;
+            }
+
+            .monument {
+                margin-top: 3vh;
+            }
+
+            .img {
+                border-radius: 10px 10px 10px 10px;
+                -moz-border-radius: 10px 10px 10px 10px;
+                -webkit-border-radius: 10px 10px 10px 10px;
+                border: 0px solid #000000;
+            }
+
+            .monuments h3 {
+                font-size: 24px;
+            }
+        }
     </style>
 </head>
 
 <body>
+    <!-- Barre horizontale -->
     <header>
         <nav>
+            <!-- LOGO -->
             <div class="logo">
-                <a href="#">
-                    <img class="logotype" src="data/image/logo1.png" alt="logo" />
-                </a>
                 <a href="Accueil.html">
-                    <img src="data/image/home.webp" alt="home" />
+                    <img class="logotype" src="data/image/logo.png" alt="logo" />
                 </a>
             </div>
-            <div class="toggle">
-                <i class="fas fa-bars ouvrir"></i>
-                <i class="fas fa-times fermer"></i>
+            <!-- Menu responsive -->
+            <div class="container nav-container">
+                <input class="checkbox" type="checkbox" name="" id="check" />
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <ul class="menu-items">
+                    <li><a href="histoire.html"><button>Histoire</button></a></li>
+                    <li><a href="monuments.html"><button>Monuments</button></a></li>
+                    <li><a href="evenements.html"><button>Informations Pratiques</button></a>
+                        <ul>
+                            <li><a href="evenements.html"><button>Evenements</button></a>
+                            </li>
+                            <li><a href="Activite.html"><button>Activités</button></a>
+                            </li>
+                            <li><a href="Voyages.html"><button>Voyages</button></a>
+                            </li>
+                            <li><a href="carte.html"><button>Carte</button></a></li>
+                        </ul>
+                    </li>
+                    <li><button>Langues</button>
+                        <ul>
+                            <li><a href="ANGAccueil.html"><button><img src="data/image/Eng.webp"
+                                            width="40"></button></a>
+                            </li>
+                            <li><a href="Accueil.html"><button><img src="data/image/FR.png" width="40"></button></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><button><img src="data/image/recherche.png" width="30"></button></a></li>
+                </ul>
             </div>
-            <ul class="menu">
-                <li><a href="monuments.html"><button>Monuments</button></a></li>
-                <li><a href="evenements.html"><button>Evenements</button></a></li>
-                <li><a href="services.html"><button>Services</button></a></li>
-                <li><a href="carte.html"><button>Cartes</button></a></li>
-                <li><a href="voyages.html"><button>Voyages</button></li>
-                <li><a href="#"><button><img src="data/image/recherche.png" width="30"></button></a></li>
-            </ul>
+            <!-- Menu -->
         </nav>
+        <div id="barre"></div>
     </header>
 
     <h1>Monuments</h1>
+    <img class="transition" src="data/image/sous_titre.png">
 
-    <div class="monuments">
+    <div class="corps">
 
-        <div class="descriptions">
-            <div class="monument">
+        <div class="ligne-monuments">
+
+            <a href="monuments/monument1.html" class="monument">
+                <h3>Mosquée-Cathédrale</h3>
+
                 <img class="image" src="data/image/image1.png">
-                <h3>La mosquée de Cordoue</h3>
-                <p>La mosquée de Cordoue ou mosquée-cathédrale, est le monument le plus important de la ville, près de
-                    deux millions de personnes la visitent chaque année.</p>
-                <a href="#">En savoir plus</a>
-            </div>
+                <p>Monument le plus important de Cordoue, elle est la pièce maîtresse du panorama religieux de Cordoue.
+                </p>
+            </a>
 
-            <div class="monument">
-                <img class="image" src="data/image/image2.png">
-                <h3>Alcázar de Cordoue</h3>
-                <p>C’est l’un des symboles les plus importants des trois cultures (musulmane, chrétienne et juive) qui a
-                    vécu dans la ville du califat pendant environ 800 ans. </p>
-                <a href="#">En savoir plus</a>
-            </div>
+            <a href="monuments/monument2.html" class="monument">
 
-            <div class="monument">
+                <h3>Medina Azahara</h3>
+                <img class="image" src="data/image/image5.png">
+                <p>Ville palatiale califale construite à Cordoue au 10ème siècle, elle
+                    représente l'apogée de la civilisation musulmane espagnole.
+                </p>
+            </a>
+
+
+            <a href="monuments/monument3.html" class="monument">
+                <h3>Pont romain</h3>
                 <img class="image" src="data/image/image3.png">
-                <h3>Pont romain de Cordoue</h3>
                 <p>Le pont romain de Cordoue, ou vieux pont, est un monument récemment restauré et d’une grande
                     importance dans la ville.</p>
-                <a href="#">En savoir plus</a>
+            </a>
+        </div>
+        <div class="ligne-monuments">
+            <a href="monuments/monument4.html" class="monument">
+                <h3>Tour de la Calahorra</h3>
+                <img class="image" src="data/image/image4.png">
+                <p>La tour de Calahorra est un vestige historique de Cordoue, qui servait autrefois de porte d'entrée à
+                    la ville.
+                </p>
+            </a>
+
+            <a href="monuments/monument5.html" class="monument">
+                <h3>Alcázar</h3>
+                <img class="image" src="data/image/image2.png">
+                <p>Construit en 1328, ancienne résidence des dirigeants de Cordoue, puis est devenu une prison jusqu'en
+                    1950.</p>
+            </a>
+
+
+            <a href="monuments/monument6.html" class="monument">
+
+                <h3>Temple Romain</h3>
+                <img class="image" src="data/image/image7.png">
+                <p>Le temple romain de Cordoue est un vestige fascinant de l'architecture romaine antique en Espagne.
+                </p>
+            </a>
+        </div>
+
+    </div>
+    <!-- Bouton retour en haut -->
+    <div class="retour">
+        <a href="#" class="haut">Haut ↑</a>
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+        <div class="first-part">
+            <div class="lien-utile">
+                <a href="#title-utile" id="title-utile">Liens utiles</a>
+                <br>
+                <a href="https://twitter.com/CordoueWeb"><img src="data/image/twitter.webp" alt="Twitter" id="twitter"></a>
+            </div>
+            <div class="ecole">
+                <a href="#title-ecole" id="title-ecole">Notre école</a>
+                <br>
+                <a href="https://iut.univ-gustave-eiffel.fr/">IUT de Marne-la-Vallée</a>
+            </div>
+            <div class="mention">
+                <a href="#title-mention" id="title-mention">Mentions légales</a>
+                <br>
+                <p>© 2022/2023</p>
+            </div>
+        </div>
+        <div class="second-part">
+            <div class="partenaire">
+                <img src="data/image/Univ.png" />
+                <img src="data/image/unsplash.png" />
+                <img src="data/image/pexels.png" />
+                <img src="data/image/unesco_vrai.png" />
             </div>
         </div>
     </div>
-    <a href="#" class="haut">Retour en haut ↑</a>
-    <footer>
-        <div class="colonne">
-            <h3>Contactez nous</h3>
-            <p><a href="contact.html" class="col">Mail</a></p>
-            <p><a href="https://twitter.com/CordoueWeb" class="col">Twitter</a></p>
-        </div>
-        <div class="colonne">
-            <h3>Notre école</h3>
-            <p>IUT de Marne-la-Vallée - Université Gustave Eiffel</p>
-            <p><a href="https://iut.univ-gustave-eiffel.fr" class="col">Site de mon école</a></p>
-        </div>
-        <div class="colonne">
-            <h3>Mentions Légales</h3>
-            <p>© 2022/2023</p>
-            <p><a href='https://whc.unesco.org/fr/etatsparties/fr' class="col">UNESCO</a></p>
-        </div>
-    </footer>
-    <script src="menulateral.js"></script>
-
 </body>
 
 </html>
