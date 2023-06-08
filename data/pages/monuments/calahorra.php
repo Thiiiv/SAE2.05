@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="../../script/barre.js"></script>
     <link rel="stylesheet" href="../../style/style.css" />
     <link rel="stylesheet" href="../../style/monuments.css" />
     <link rel="shotcut icon" href="../../images/favicon.png">
-    <title>Alcazar</title>
+    <title>Tour de la Calahorra</title>
 </head>
 
 <body>
@@ -31,7 +33,7 @@
                     <span class="line line3"></span>
                 </div>
                 <ul class="menu-items">
-                    <li><a href="../histoire.php"><button>Histoires</button></a></li>
+                    <li><a href="../histoire.php"><button>Histoire</button></a></li>
                     <li><a href="../monuments.php"><button>Monuments</button></a></li>
                     <li><a href="../evenements.php"><button>Informations Pratiques</button></a>
                         <ul>
@@ -59,15 +61,14 @@
         <div id="barre"></div>
     </header>
 
-
-
     <div class="flexboxcolonne">
-        <div id="fond" style="background-image: url('../../images/monuments/alcazarfond.jpg');">
+        <div id="fond" style="background-image: url('../../images/monuments/calahorrafond.jpg');">>
             <a id="boutonretour" href="../monuments.php">
                 <p>◄ Monuments</p>
             </a>
-            <h1>Alcazar</h1>
-            <a style="margin-top: 75vh;" href="#content"><img id="flechebas" class="shake-vertical" src="../../images/flecheversbas.png"></a>
+            <h1>Tour de la Calahorra</h1>
+            <a style="margin-top: 75vh;" href="#content"><img id="flechebas" class="shake-vertical"
+                    src="../../images/flecheversbas.png"></a>
         </div>
 
         <div id="content" class="partie">
@@ -75,12 +76,22 @@
             <img class="transition reversetransition" src="../../images/sous_titre.png">
 
             <div class="contenu droite">
-                <p>
-                La tour de Calahorra est un vestige de l'histoire de Cordoue, en Espagne. Elle a été construite par les Maures au XIIe siècle pour défendre la ville contre les attaques ennemies. Au fil des siècles, la tour a subi des modifications et des rénovations, notamment sous le règne des rois chrétiens, qui ont ajouté des éléments décoratifs.
+                <p>Ancienne cité située à côté de
+                    Cordoue en Andalousie, en Espagne. Fondée au 10ème siècle, elle a été construite sous le règne de
+                    l'émir Abd al-Rahman III, qui a régné sur l'Empire califal de Cordoue à l'époque. La ville était
+                    destinée à être un centre politique et administratif pour l'empire, ainsi qu'un lieu de vie pour la
+                    cour et les fonctionnaires. Elle était considérée comme l'une des plus grandes cités du monde
+                    musulman à l'époque, avec une population estimée à plusieurs milliers de personnes.
                     <br><br>
-                    Au XXe siècle, la tour de Calahorra a été restaurée et transformée en musée de la Tolérance. Le musée explore l'histoire de Cordoue en tant que ville multiculturelle et la coexistence pacifique entre les différentes religions qui ont habité la ville. Aujourd'hui, la tour de Calahorra est un site touristique populaire à Cordoue, offrant une vue panoramique sur la ville et un aperçu fascinant de l'histoire de l'Espagne médiévale.
+                    Malheureusement, la cité a été abandonnée peu de temps après sa construction et est restée en grande
+                    partie oubliée jusqu'au 20ème siècle, lorsque des fouilles archéologiques ont été entreprises pour
+                    en découvrir les vestiges. Aujourd'hui, les ruines de Medina Azahara sont considérées comme un
+                    témoignage important de la richesse culturelle et historique de la période islamique en Espagne,
+                    offrant un aperçu des modes de vie et des valeurs de l'époque. Bien que les vestiges de la ville ne
+                    soient pas très bien conservés, ils continuent à susciter un grand intérêt auprès des historiens et
+                    des touristes
                 </p>
-                <img src="../../images/monuments/alcazarhistoire.jpg">
+                <img src="../../images/monuments/calahorrahistoire.jpg">
             </div>
 
         </div>
@@ -89,23 +100,19 @@
             <h3>Architecture</h3>
             <img class="transition" src="../../images/sous_titre.png">
             <div class="contenu gauche">
-                <img src="../../images/monuments/alcazararchitecture.jpg">
-                <p>L'architecture de l'Alcazar de Cordoue est un mélange de styles mauresque et chrétien. Le palais
-                    d'origine construit par les Maures était un exemple typique de l'architecture islamique, avec des
-                    cours intérieures entourées de portiques, des fontaines et des jardins luxuriants. Cependant, après
-                    la reconquête de Cordoue par les chrétiens, le palais a subi des modifications importantes,
-                    notamment la construction d'une tour et la transformation de certaines parties du palais en une
-                    forteresse militaire. Plus tard, les Rois Catholiques ont ajouté des éléments de style Renaissance à
-                    l'architecture, tels que des voûtes en berceau et des arcs en plein cintre.
+                <img src="../../images/monuments/calahorraarchitecture.jpg">
+                <p>Medina Azahara est une ancienne ville construite à Cordoue au Xème siècle sous le règne du calife
+                    Abderrahman III. Elle a été conçue comme un centre politique et administratif pour l'empire califal
+                    et était considérée comme l'un des centres les plus importants de la culture et de la civilisation
+                    de l'époque. Les ruines de la ville, qui se composent de mélanges de styles architecturaux arabes,
+                    berbères et hispano-romains, montrent un niveau élevé de sophistication technique et de soin pour le
+                    bien-être de ses habitants.
                     <br><br>
-                    Le palais dispose également d'un certain nombre de salles somptueuses, notamment la Sala de los
-                    Mosaicos, qui est décorée de magnifiques mosaïques, la Sala de los Reyes, qui abrite des statues des
-                    rois wisigoths et une grande cour centrale, la Cour des Orangers, qui est ornée de fontaines et
-                    d'orangers. Les jardins du palais sont également remarquables, avec des arbres fruitiers, des
-                    fontaines et des étangs. Dans l'ensemble, l'architecture de l'Alcazar de Cordoue est un témoignage
-                    de l'histoire riche et complexe de la ville, ainsi que de l'influence des différents peuples qui ont
-                    occupé la région au fil des siècles.
-
+                    L'architecture de Medina Azahara était très avancée pour l'époque, avec des techniques telles que
+                    l'arc en anse de panier, les dômes en caissons et les mosaïques colorées. Cependant, la ville a été
+                    abandonnée peu de temps après sa construction en raison de conflits politiques et militaires. Les
+                    efforts de restauration et de conservation de la ville sont en cours pour préserver son héritage
+                    architectural pour les générations futures.
                 </p>
             </div>
         </div>
@@ -142,6 +149,7 @@
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
