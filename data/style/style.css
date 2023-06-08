@@ -1,21 +1,21 @@
  @font-face {
     font-family: Dyno;
-    src: url(../data/fonts/Dyno/Dyno\ Regular.ttf)
+    src: url(../fonts/Dyno/Dyno\ Regular.ttf)
 }
 
 @font-face {
     font-family: Cicle Fina;
-    src: url(../data/fonts/Cicle/Cicle\ Fina.ttf)
+    src: url(../fonts/Cicle/Cicle\ Fina.ttf)
 }
 
 @font-face {
     font-family: Cicle Gordita;
-    src: url(../data/fonts/Cicle/Cicle\ Gordita.ttf)
+    src: url(../fonts/Cicle/Cicle\ Gordita.ttf)
 }
 
 @font-face {
     font-family: Cicle Semi;
-    src: url(../data/fonts/Cicle/Cicle\ Semi.ttf)
+    src: url(../fonts/Cicle/Cicle\ Semi.ttf)
 }
 
 /*-- Fin font face --*/
@@ -134,7 +134,7 @@ body {
     margin-right: 2vw;
     max-width: 5vw;
     max-height: 5vh;
-    content: url("../data/images/triangle.png");
+    content: url("../images/triangle.png");
     animation: shake-vertical 5s ease-out infinite both;
   }
 
