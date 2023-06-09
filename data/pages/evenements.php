@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<html lang="fr">
+<?php
+session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <!-- OSEF -->
     <meta charset="UTF-8">
@@ -40,6 +40,7 @@
             justify-content: center;
             align-items: center;
             flex-direction: row;
+            flex-wrap: wrap;
         }
 
         .flexboxcol {
@@ -146,68 +147,37 @@ border-radius: 10px 10px 10px 10px;
     <h1>Évènements</h1>
 
     <div class="flexboxrow">
-        <div class="flexboxcol">
-            <div class="boite">
-                <img class="photoevent" src="../images/fetesaine.jpg">
-                <div class="texteevent">
-                    <h4 class="titreevent">Fête sainte</h4>
-                    <h4 class="soustitreevent">Fête annuelle, en début Avril</h4>
-                    <p>Spectacle coloré qui célèbre la culture et la religion de la ville. La célébration commence par
-                        un cortège des principales figures religieuses de la ville, accompagnées par des
-                        spectacles de musique et de danse. Le cortège se dirige ensuite vers la cathédrale où les gens
-                        peuvent admirer les statues et objets religieux. A la fin,
-                        des spectacles de musique et de danse s'ensuivent dans les rues de la ville.
-                    </p>
-                </div>
+
+    <?php
+
+    include('connexion.inc.php');
+    $requete = 
+    "SELECT
+    titre, sous_titre, description, lien
+    FROM evenements;";
+
+    $cnx->exec("set search_path to cordoue;");
+
+    $results = $cnx->query(
+        $requete
+    );
+
+    while ($ligne = $results->fetch(PDO::FETCH_OBJ))
+    {
+
+        echo "
+        <div class='boite'>
+            <img class='photoevent' src=".$ligne->lien.">
+            <div class='texteevent'>
+                <h4 class='titreevent'>".$ligne->titre."</h4>
+                <h4 class='soustitreevent'>".$ligne->sous_titre."</h4>
+                <p>".$ligne->description."</p>
             </div>
+        </div>";
+    }
+    $results->closeCursor();
 
-
-            <div class="boite">
-                <img class="photoevent" src="../images/patios.jpg">
-                <div class="texteevent">
-                    <h4 class="titreevent">Fête des patios</h4>
-                    <h4 class="soustitreevent">Fête annuelle, en mi-Mai</h4>
-                    <p>Concours de décoration de patios, ou cours intérieures, qui ont lieu dans les quartiers
-                        historiques de la ville. Les patios sont décorés avec des fleurs, des plantes, et des arcs en
-                        treillis. créant des espaces colorés et accueillants. La fête des patios est considérée comme
-                        l'un des événements les plus importants de l'année à Cordoue.
-                    </p>
-                </div>
-            </div>
-
-
-        </div>
-
-        <div class="flexboxcol">
-            <div class="boite">
-                <img class="photoevent" src="../images/noel.jpg">
-                <div class="texteevent">
-                    <h4 class="titreevent">Noël</h4>
-                    <h4 class="soustitreevent">Fête annuelle, en fin Décembre</h4>
-                    <p>Noël à Cordoue est célébré principalement comme un événement religieux et familial. Les gens se
-                        réunissent généralement avec leur famille et leurs amis pour célébrer la naissance de Jésus. Les
-                        rues de Cordoue sont décorées avec des lumières et des décorations, les marchés de Noël sont
-                        organisés dans la ville, où les visiteurs peuvent acheter des cadeaux, des décorations et des
-                        spécialités locales.</p>
-                    </p>
-                </div>
-            </div>
-
-            <div class="boite">
-                <img class="photoevent" src="../images/cruces.jpg">
-                <div class="texteevent">
-                    <h4 class="titreevent">Croix de Mai</h4>
-                    <h4 class="soustitreevent">Fête annuelle, en fin Avril</h4>
-                    <p>Cette fête consiste à installer dans les rues et sur les places de la ville, des croix faites de
-                        fleurs. Ces créations participent, en outre, à un concours organisé par la municipalité. Il
-                        s'agit d'une ancienne tradition religieuse. Ce sont les associations de quartier qui sont chargés
-                        de faire de Cordoue un tableau de couleurs et de fête. Les
-                        croix sont exposées toute la journée, et le soir l'ambiance est assurée par des spectacles de
-                        musique et de danse
-                    </p>
-                </div>
-            </div>
-        </div>
+    ?>
     </div>
     <?php 
     include('footerPages.inc.html');
