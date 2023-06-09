@@ -13,25 +13,25 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- JS -->
-    <script src="horshtml/barre.js"></script>
-    <script src="horshtml/menulateral.js"></script>
+    <script src="data/script/barre.js"></script>
+    <script src="data/script/menulateral.js"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="horshtml/Style.css" />
-    <link rel="stylesheet" href="horshtml/accueil.css" />
+    <link rel="stylesheet" href="data/style/style.css" />
+    <link rel="stylesheet" href="data/style/accueil.css" />
     <link rel="shotcut icon" href="data/images/favicon.png">
 </head>
 
 <body>
     
     <?php 
-    include('header.html');
+    include('data/pages/headerIndex.inc.html');
     ?>
 
     <!-- Image -->
     <div class="accueil-content">
         <span id="title-behind-img">Cordoue</span>
-        <img src="data/images/foreground3.png" alt="foreground" id="foreground" />
+        <img src="data/images/foreground3.webp" alt="foreground" id="foreground" />
     </div>
     <!-- Contenu -->
     <section class="page-content">
@@ -112,7 +112,7 @@
     
     
     <?php 
-    include('footer.html');
+    include('data/pages/footerIndex.inc.html');
     ?>
     
 </body>
