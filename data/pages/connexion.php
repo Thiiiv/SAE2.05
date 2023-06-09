@@ -3,7 +3,7 @@ session_start();
 
 if ( (!isset($_POST['email'])) || (!isset($_POST['motdepasse'])) || $_POST['email'] == "" || $_POST['motdepasse'] == "" ) {
     $_SESSION['ok'] = false;
-    header('location:connexion.php');
+    header('location:formconnexion.php');
 } else {
     $_SESSION['email'] = $_POST['email'];
  
@@ -23,10 +23,10 @@ if ( (!isset($_POST['email'])) || (!isset($_POST['motdepasse'])) || $_POST['emai
 
         $_SESSION['id'] = $resultat['id'];
         $_SESSION['statut'] = $resultat['typeutilisateur'];
-        header('location:index.php');
+        header('location:../../index.php');
         } else {
         $_SESSION['ok'] = false;
-        header('location:connexion.php');
+        header('location:formconnexion.php');
         
     }
 }

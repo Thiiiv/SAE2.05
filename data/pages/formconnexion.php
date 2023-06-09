@@ -41,6 +41,7 @@
             width: 20vw;
             height : 4vh;
             border: none;
+            text-align: center;
         }
         .form form #submit {
             border-radius : 50px;
