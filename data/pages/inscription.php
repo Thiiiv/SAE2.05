@@ -32,7 +32,7 @@ if ( (!isset($_POST['email'])) || (!isset($_POST['motdepasse'])) || $_POST['emai
         $_SESSION['ok'] = true;
         $_SESSION['email'] = $_POST['email'];
         $_SESSION['id'] = $id;
-        $_SESSION['statut'] = "F"; //pas sur, ptetre que c'est false
+        $_SESSION['statut'] = "f";
         header('location:../../index.php');
 }
 ?>
