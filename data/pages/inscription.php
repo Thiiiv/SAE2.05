@@ -67,7 +67,7 @@ if ( (!isset($_POST['email'])) || (!isset($_POST['motdepasse'])) || $_POST['emai
     include('headerPages.inc.html');
     ?>
      <div class='form'>
-        <form class="form" style='width:50vw;' action="connexion.php" method="POST">
+        <form class="form" style='width:50vw;' action="inscription.php" method="POST">
             <div>Adresse mail <br><input type="text" name="email" /> <br />
             </div>
             <div>
