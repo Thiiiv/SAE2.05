@@ -4,6 +4,12 @@ session_start();
 if ( (!isset($_POST['email'])) || (!isset($_POST['motdepasse'])) || $_POST['email'] == "" || $_POST['motdepasse'] == "" ) {
     $_SESSION['ok'] = false;
 } else {
+
+    if (!(preg_match("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]+$/", $_POST['email']))){
+        header('location:connexion.php');
+    }
+
+
     $_SESSION['email'] = $_POST['email'];
  
     include('connexion.inc.php');
