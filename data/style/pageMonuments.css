@@ -35,7 +35,7 @@
 
         /* Texte de chaque monument */
         .ligne-monuments p {
-            text-align: left;
+            
             width: 20vw;
             font-size: 30px;
             margin-top: 3vh;
@@ -44,8 +44,7 @@
         /* Titre de chaque monument */
         h3 {
             text-align: center;
-            font-size: 40px;
-            font-weight: 600;
+            font-size: 1.8rem;
         }
 
         /* Ligne de 3 monuments */
@@ -104,7 +103,7 @@
         @media screen and (max-width:901px) {
             .ligne-monuments {
                 flex-direction: column;
-                width: 90vw;
+                width: 100%;
             }
 
             h1 {
