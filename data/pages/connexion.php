@@ -6,7 +6,7 @@ $_SESSION['ok'] = false;
 $_SESSION['email'] = null;
 $_SESSION['id'] = null;
 $_SESSION['statut'] = null;
-if ( (isset($_POST['email'])) || (isset($_POST['motdepasse'])) || $_POST['email'] != "" || $_POST['motdepasse'] != "" ) {
+if ( (isset($_POST['email'])) && (isset($_POST['motdepasse'])) && $_POST['email'] != "" && $_POST['motdepasse'] != "" ) {
 
     //Vérification de l'entrée utilisateur
     if (!(preg_match("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]+$/", $_POST['email']))){
