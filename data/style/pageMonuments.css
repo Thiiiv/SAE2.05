@@ -44,6 +44,7 @@
 
         /* Titre de chaque monument */
         h3 {
+            padding-top:0.5vh;
             text-align: center;
             font-size: 1.8rem;
             width: 100%;
@@ -70,6 +71,7 @@
             margin: 1vw;
             color: white;
             text-decoration: none;
+            flex:1;
        
             background-color:#3a3a3a;
             border-radius: 11px 11px 11px 11px;
@@ -115,7 +117,8 @@
 
             .transition {
                 width: 75%;
-                height: 3vh;
+                height:10vh;
+                
             }
 
             .ligne-monuments p {
@@ -124,6 +127,10 @@
 
             .monuments img {
                 width: 100vw;
+            }
+
+            .monument img {
+                width: 60%;
             }
 
             .monument {
