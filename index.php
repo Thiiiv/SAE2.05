@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION["location"] = "root";
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
