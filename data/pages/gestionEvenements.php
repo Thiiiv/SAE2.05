@@ -8,16 +8,58 @@ if (!isset($_SESSION['statut']) || $_SESSION['statut'] != 1){
 
 
 if (isset($_POST['numEvent'])) {
+
+   
+
     include('connexion.inc.php');
     $requete =
-    "delete from evenement
-    where numevent = ".$_POST['numEvent'];
-
-    echo $requete;
+    "delete from evenements
+    where numevent = ".$_POST['numEvent'].";";
     $cnx->exec($requete);
-    header('location:heritage.php');
 
+    header('location:gestionEvenements.php');
 }
+
+if (isset($_POST['titre']) && isset($_POST['sous_titre']) && isset($_POST['description']) && isset($_POST['titre'])){
+
+    function securiseDonnee($donnees,$doesTrim){
+        if ($doesTrim){
+            $donnees = trim($donnees);
+        }
+        $donnees = stripslashes($donnees);
+        $donnees = htmlspecialchars($donnees);
+        return $donnees;
+    }
+
+    function ajouterGuillemets($texte) {
+        $caracteres = str_split($texte);
+        $nouveauTexte = [];
+      
+        foreach ($caracteres as $caractere) {
+            $nouveauTexte[] = $caractere;
+            
+            if ($caractere == "'") {
+                $nouveauTexte[] = "'";
+            }
+        }
+      
+        return join($nouveauTexte);
+      }
+
+    include('connexion.inc.php');
+    $requete =
+    "INSERT INTO evenements (titre, sous_titre, description, lien)
+    VALUES ('".
+    securiseDonnee($_POST['titre'],true)."','".
+    securiseDonnee($_POST['sous_titre'],true)."','".
+    ajouterGuillemets(securiseDonnee($_POST['description'],false))."','".
+    securiseDonnee($_POST['lien'],true)."');";
+
+    $cnx->exec($requete);
+    header('location:evenements.php');
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -58,9 +100,6 @@ if (isset($_POST['numEvent'])) {
     "SELECT
     titre, numevent
     FROM evenements;";
-
-    $cnx->exec("set search_path to cordoue;");
-
     $results = $cnx->query(
         $requete
     );
@@ -82,12 +121,9 @@ if (isset($_POST['numEvent'])) {
 
     $results->closeCursor();
     ?>
-
-
 </div>
 
-
-    <div class='form'>
+    <div class='form' style="margin-top:10vh;">
     <h2>Ajouter un événement</h2>
         <form class="form" style='width:50vw;' action="gestionEvenements.php" method="POST">
             <div>
@@ -103,22 +139,10 @@ if (isset($_POST['numEvent'])) {
                 Lien de l'image<br><input type="text" name="lien" /><br/>
             </div>
 
-
-
-
-
-
-
             <input type="submit" name="submit" value="Ajouter" id="submit"/>
         </form>
 
-
-
     </div>
-
-
-
-
 
 
     <?php 
