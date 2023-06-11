@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 $_SESSION["location"] = "data/pages/";
 if ( (!isset($_POST['email'])) || (!isset($_POST['motdepasse'])) || $_POST['email'] == "" || $_POST['motdepasse'] == "" ) {
     $_SESSION['ok'] = false;
@@ -45,7 +46,7 @@ if ( (!isset($_POST['email'])) || (!isset($_POST['motdepasse'])) || $_POST['emai
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Monument</title>
+    <title>Connexion</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -66,7 +67,7 @@ if ( (!isset($_POST['email'])) || (!isset($_POST['motdepasse'])) || $_POST['emai
     <?php 
     include('header.inc.php');
     ?>
-     <div class='form'>
+     <div class='form' style="padding:10vw;">
         <form class="form" style='width:50vw;' action="connexion.php" method="POST">
             <div>Adresse mail <br><input type="text" name="email" /> <br />
             </div>
@@ -74,7 +75,6 @@ if ( (!isset($_POST['email'])) || (!isset($_POST['motdepasse'])) || $_POST['emai
                 Mot de passe <br><input type="password" name="motdepasse" /><br />
             </div>
             <input type="submit" name="submit" value="Se connecter" id="submit"/>
-            </p>
         </form>
     </div>
 
