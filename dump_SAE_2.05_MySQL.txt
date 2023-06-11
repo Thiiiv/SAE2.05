@@ -28,7 +28,7 @@ ALTER TABLE cordoue.evenements OWNER TO "lucas.merlin";
 
 CREATE TABLE cordoue.utilisateur (
     id INT(11) NOT NULL AUTO_INCREMENT,
-    email VARCHAR(15) NOT NULL,
+    email VARCHAR(50) NOT NULL,
     motdepasse CHAR(32) NOT NULL,
     typeutilisateur TINYINT(1),
     PRIMARY KEY (id),
