@@ -1,0 +1,245 @@
+#fond h1 {
+    font-size: 6em;
+    left: 0;
+    right: 0;
+    font-family: Dyno;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(71, 71, 71) 3px 5px 2px;
+    cursor: default;
+    user-select: none;
+}
+
+.partie h3 {
+    user-select: none;
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 15vh;
+    color: #f7af3e;
+    justify-content: center;
+    font-weight: bolder;
+    font-family: Dyno;
+    text-shadow: #474747 3px 5px 2px, 0px 0px 0px rgba(255, 255, 255, 0);
+
+}
+
+.partie {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 5vh;
+
+}
+
+.flexboxcolonne {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+/* Animation bouton vers le bas */
+.shake-vertical {
+    -webkit-animation: shake-vertical 7s linear infinite both;
+    animation: shake-vertical 7s linear infinite both
+}
+
+@-webkit-keyframes shake-vertical {
+
+    0%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+
+    10%,
+    30%,
+    50%,
+    70% {
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px)
+    }
+
+    20%,
+    40%,
+    60% {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px)
+    }
+
+    80% {
+        -webkit-transform: translateY(6.4px);
+        transform: translateY(6.4px)
+    }
+
+    90% {
+        -webkit-transform: translateY(-6.4px);
+        transform: translateY(-6.4px)
+    }
+}
+
+@keyframes shake-vertical {
+
+    0%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+
+    10%,
+    30%,
+    50%,
+    70% {
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px)
+    }
+
+    20%,
+    40%,
+    60% {
+        -webkit-transform: translateY(8px);
+        transform: translateY(8px)
+    }
+
+    80% {
+        -webkit-transform: translateY(6.4px);
+        transform: translateY(6.4px)
+    }
+
+    90% {
+        -webkit-transform: translateY(-6.4px);
+        transform: translateY(-6.4px)
+    }
+}
+
+
+#fond {
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+
+}
+
+#fond #flechebas {
+    width: 100px;
+
+}
+
+
+.contenu {
+    width: 85vw;
+    height: auto;
+    background-color: #333333;
+    display: flex;
+    flex-direction: row;
+    border-radius: 30px 30px 30px 30px;
+    -moz-border-radius: 30px 30px 30px 30px;
+    -webkit-border-radius: 30px 30px 30px 30px;
+    border: 3px outset #f7af3e;
+    -webkit-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.75);
+
+
+}
+
+.contenu img {
+    width: 30vw;
+    margin: 1%;
+    height: 50vh;
+    position: relative;
+    border: 3px solid #3d3c3c;
+    border-radius: 30px 30px 30px 30px;
+    -moz-border-radius: 30px 30px 30px 30px;
+    -webkit-border-radius: 30px 30px 30px 30px;
+    box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.75);
+}
+
+.transition {
+    height: 3vh;
+    width: 35vw;
+    min-width: 250px;
+    margin-bottom: 3vh;
+}
+
+.reversetransition {
+    transform: scaleX(-1);
+}
+
+/* Téléphone */
+@media screen and (max-width:901px) {
+    .contenu {
+        width: 98vw;
+    }
+
+    #fond h1 {
+        font-size: 3em;
+    }
+
+    .droite img {
+        left: 0;
+    }
+
+    .contenu {
+        flex-direction: column;
+    }
+
+    .contenu img {
+        width: 97%;
+        order: 0;
+    }
+
+    .contenu p {
+        order: 1;
+    }
+
+}
+
+.contenu {
+    display: flex;
+    align-items: center;
+}
+
+.contenu p {
+    margin: 1%;
+}
+
+#boutonretour {
+    font-family: Dyno;
+    width: 200px;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    background-color: rgba(0, 0, 0, 0.432);
+    text-align: center;
+    align-items: center;
+    border: 2px solid #f7af3e;
+    position: fixed;
+    z-index: 10;
+    left: 2vw;
+    top: 10vh;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 11px 11px 11px 11px;
+    -webkit-border-radius: 11px 11px 11px 11px;
+    -moz-border-radius: 11px 11px 11px 11px;
+    transition: 0.1s;
+    font-size: larger;
+
+}
+
+#boutonretour:hover {
+    background-color: #f7af3e;
+
+    transition: 0.5s;
+}

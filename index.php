@@ -1,3 +1,7 @@
+<?php
+session_start();
+$_SESSION["location"] = "root";
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -25,7 +29,7 @@
 <body>
     
     <?php 
-    include('data/pages/headerIndex.inc.html');
+    include('data/pages/header.inc.php');
     ?>
 
     <!-- Image -->
