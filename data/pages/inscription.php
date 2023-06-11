@@ -23,6 +23,7 @@ if ( (!isset($_POST['email'])) || (!isset($_POST['motdepasse'])) || $_POST['emai
 
     if ($requete){ header('location:inscription.php');}
 
+    // Création du compte utilisateur
     $requete = 
     "INSERT INTO utilisateur
     VALUES (DEFAULT,'".$_POST['email']."',md5('".$_POST['motdepasse']."'),FALSE) returning id";
@@ -47,17 +48,13 @@ if ( (!isset($_POST['email'])) || (!isset($_POST['motdepasse'])) || $_POST['emai
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Monument</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <!-- JS -->
     <script src="../script/barre.js"></script>
     <script src="../script/menulateral.js"></script>
 
     <!-- CSS -->
     <link rel="stylesheet" href="../style/style.css" />
-    <link rel="stylesheet" href="../style/connexion.css" /> 
+    <link rel="stylesheet" href="../style/formulaire.css" /> 
     <link rel="shotcut icon" href="../images/favicon.png">
 
 </head>

@@ -9,7 +9,6 @@ $_SESSION["location"] = "data/pages/monuments/";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="../../script/barre.js"></script>
     <link rel="stylesheet" href="../../style/style.css" />
     <link rel="stylesheet" href="../../style/monuments.css" />
@@ -18,11 +17,10 @@ $_SESSION["location"] = "data/pages/monuments/";
 </head>
 
 <body>
-    <header>
-        <?php
-        include('../header.inc.php');
-        ?>
-    </header>
+
+    <?php
+    include('../header.inc.php');
+    ?>
 
     <div class="flexboxcolonne">
         <div id="fond" style="background-image: url('../../images/monuments/pontromainfond.jpg');">>
@@ -53,9 +51,9 @@ $_SESSION["location"] = "data/pages/monuments/";
             <div class="contenu gauche">
                 <img src="../../images/monuments/pontromainarchitecture.jpg">
                 <p>
-                Le Pont Romain de Cordoue est construit dans un style typique de l'architecture romaine. Il est composé de 16 arches, en forme de fer à cheval, qui reposent sur des piles renforcées par des contreforts triangulaires. Le pont mesure 247 mètres de long et 9 mètres de large, et il est considéré comme un chef-d'œuvre d'ingénierie.
-<br><br>
-Au fil des siècles, le Pont Romain de Cordoue a été restauré à plusieurs reprises, notamment sous le règne des califes omeyyades. Ils ont ajouté des arcs en briques et en pierre pour renforcer la structure du pont et pour ajouter une touche esthétique. Aujourd'hui, le pont est un symbole emblématique de l'histoire de Cordoue, et il est souvent visité par les touristes qui apprécient la beauté de son architecture et sa signification historique.
+                    Le Pont Romain de Cordoue est construit dans un style typique de l'architecture romaine. Il est composé de 16 arches, en forme de fer à cheval, qui reposent sur des piles renforcées par des contreforts triangulaires. Le pont mesure 247 mètres de long et 9 mètres de large, et il est considéré comme un chef-d'œuvre d'ingénierie.
+                    <br><br>
+                    Au fil des siècles, le Pont Romain de Cordoue a été restauré à plusieurs reprises, notamment sous le règne des califes omeyyades. Ils ont ajouté des arcs en briques et en pierre pour renforcer la structure du pont et pour ajouter une touche esthétique. Aujourd'hui, le pont est un symbole emblématique de l'histoire de Cordoue, et il est souvent visité par les touristes qui apprécient la beauté de son architecture et sa signification historique.
                 </p>
             </div>
         </div>

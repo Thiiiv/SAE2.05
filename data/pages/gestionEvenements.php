@@ -2,14 +2,13 @@
 session_start();
 $_SESSION["location"] = "data/pages/";
 
+// Il faut les permissions admin 
 if (!isset($_SESSION['statut']) || $_SESSION['statut'] != 1){
     header('location:../../index.php');
 }
 
-
+// Evenement sélectionné pour le supprimer
 if (isset($_POST['numEvent'])) {
-
-   
 
     include('connexion.inc.php');
     $requete =
@@ -22,10 +21,8 @@ if (isset($_POST['numEvent'])) {
 
 if (isset($_POST['titre']) && isset($_POST['sous_titre']) && isset($_POST['description']) && isset($_POST['titre'])){
 
-    function securiseDonnee($donnees,$doesTrim){
-        if ($doesTrim){
-            $donnees = trim($donnees);
-        }
+    function securiseDonnee($donnees){
+        $donnees = trim($donnees);
         $donnees = stripslashes($donnees);
         $donnees = htmlspecialchars($donnees);
         return $donnees;
@@ -50,12 +47,13 @@ if (isset($_POST['titre']) && isset($_POST['sous_titre']) && isset($_POST['descr
     $requete =
     "INSERT INTO evenements (titre, sous_titre, description, lien)
     VALUES ('".
-    securiseDonnee($_POST['titre'],true)."','".
-    securiseDonnee($_POST['sous_titre'],true)."','".
-    ajouterGuillemets(securiseDonnee($_POST['description'],false))."','".
-    securiseDonnee($_POST['lien'],true)."');";
+    securiseDonnee($_POST['titre'])."','".
+    securiseDonnee($_POST['sous_titre'])."','".
+    ajouterGuillemets(securiseDonnee($_POST['description']))."','".
+    securiseDonnee($_POST['lien'])."');";
 
     $cnx->exec($requete);
+
     header('location:evenements.php');
 }
 
@@ -81,7 +79,7 @@ if (isset($_POST['titre']) && isset($_POST['sous_titre']) && isset($_POST['descr
 
     <!-- CSS -->
     <link rel="stylesheet" href="../style/style.css" />
-    <link rel="stylesheet" href="../style/connexion.css" />
+    <link rel="stylesheet" href="../style/formulaire.css" />
     <link rel="shotcut icon" href="../images/favicon.png">
 
 </head>
@@ -104,7 +102,10 @@ if (isset($_POST['titre']) && isset($_POST['sous_titre']) && isset($_POST['descr
         $requete
     );
 
-    echo "<h1>Gestion des événements</h1><div style='padding-top:10vh;display:flex;align-items:center;justify-content:center;flex-direction:column;'><ul><h2>Retirer des événements</h2>";
+    echo "<h1 style='margin-top:10vh;'>Gestion des événements</h1>
+    <div style='padding-top:10vh;display:flex;align-items:center;justify-content:center;flex-direction:column;'>
+    <ul>
+        <h2>Retirer des événements</h2>";
 
     while ($ligne = $results->fetch(PDO::FETCH_OBJ)) {
 
@@ -121,6 +122,7 @@ if (isset($_POST['titre']) && isset($_POST['sous_titre']) && isset($_POST['descr
 
     $results->closeCursor();
     ?>
+    </ul>
 </div>
 
     <div class='form' style="margin-top:10vh;">
