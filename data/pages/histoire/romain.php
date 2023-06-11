@@ -1,3 +1,6 @@
+<?php
+$_SESSION["location"] = "data/pages/monuments/";
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -25,7 +28,7 @@
 <body>
     <!-- Barre horizontale -->
     <?php 
-        include('../headerSousPages.inc.html');
+        include('../header.inc.php');
     ?>
     
     <h1>Epoque romaine</h1>

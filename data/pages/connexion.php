@@ -1,7 +1,11 @@
 <?php
 session_start();
-
 $_SESSION["location"] = "data/pages/";
+
+$_SESSION['ok'] = false;
+$_SESSION['email'] = null;
+$_SESSION['id'] = null;
+$_SESSION['statut'] = 'f';
 if ( (!isset($_POST['email'])) || (!isset($_POST['motdepasse'])) || $_POST['email'] == "" || $_POST['motdepasse'] == "" ) {
     $_SESSION['ok'] = false;
 } else {
@@ -76,6 +80,7 @@ if ( (!isset($_POST['email'])) || (!isset($_POST['motdepasse'])) || $_POST['emai
             </div>
             <input type="submit" name="submit" value="Se connecter" id="submit"/>
         </form>
+        <a href="inscription.php" style="color:white">S'inscrire</a>
     </div>
 
     <?php 

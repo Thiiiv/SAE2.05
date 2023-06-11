@@ -5,6 +5,7 @@ try {
     }
     catch (PDOException $e) {
         echo "\nError: " . $e;
+        header('location:../../index.php');
     }
 
 ?>

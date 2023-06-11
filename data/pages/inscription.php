@@ -67,15 +67,15 @@ if ( (!isset($_POST['email'])) || (!isset($_POST['motdepasse'])) || $_POST['emai
     <?php 
     include('header.inc.php');
     ?>
-     <div class='form'>
+     <div class='form' style="padding:10vw;">
         <form class="form" style='width:50vw;' action="inscription.php" method="POST">
             <div>Adresse mail <br><input type="text" name="email" /> <br />
             </div>
             <div>
                 Mot de passe <br><input type="password" name="motdepasse" /><br />
             </div>
-            <input type="submit" name="submit" value="Se connecter" id="submit"/>
-            </p>
+            <input type="submit" name="submit" value="Créer un compte" id="submit"/>
+            <a href="connexion.php" style="color:white">Se connecter</a>
         </form>
     </div>
 

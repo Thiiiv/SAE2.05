@@ -2,7 +2,7 @@
 session_start();
 $_SESSION["location"] = "data/pages/";
 
-if (!isset($_SESSION['statut'])){
+if (!isset($_SESSION['statut']) || $_SESSION['statut'] != 1){
     header('location:../../index.php');
 }
 
