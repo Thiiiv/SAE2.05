@@ -5,7 +5,6 @@ try {
         $cnx->exec("set search_path to cordoue;");
     }
     catch (PDOException $e) {
-        echo "\nError: " . $e;
         header('location:../../index.php');
     }
 

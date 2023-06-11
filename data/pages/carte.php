@@ -12,10 +12,6 @@ $_SESSION["location"] = "data/pages/";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Carte</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <!-- JS -->
     <script src="../script/barre.js"></script>
     <script src="../script/menulateral.js"></script>
@@ -40,8 +36,7 @@ $_SESSION["location"] = "data/pages/";
         <form name="iti" action="#" class="itineraire">
             Vous partez de : <input type="text" class="depart" name="depart" />
             <input type="hidden" name="arrivee" value="Cordoba" />
-            <input type="button" value="Rechercher" class="recherche"
-                onclick="window.open("http://maps.google.fr/maps?f=d&hl=fr&saddr='+document.iti.depart.value+'&daddr='+document.iti.arrivee.value+'&ie=UTF8&z=12&om=1');" />
+            <input type="button" value="Rechercher" class="recherche" onclick="window.open('http://maps.google.fr/maps?f=d&hl=fr&saddr='+document.iti.depart.value+'&daddr='+document.iti.arrivee.value+'&ie=UTF8&z=12&om=1');">
         </form>
     </section>
     <?php 

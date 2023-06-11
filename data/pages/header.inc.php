@@ -21,17 +21,10 @@ if (isset($_SESSION['location'])) {
             break;
     }
 }
-?>
-<!DOCTYPE html>
-
-<head>
-    <link rel="stylesheet" href="../style/style.css">
-</head>
-<div class="menu">
-    <?php
-
 
     echo '
+<header>
+    <div class="menu">
     <div class="accueil">
     <a href="' . $index . '" class="lien">
         <img src="' . $images . 'logo.png" alt="logo"/>
@@ -63,6 +56,6 @@ if (isset($_SESSION['location'])) {
         <a href="' . $liens . 'connexion.php" class="lien"><img src="' . $images . 'connect.png" alt="connexion" id="connexion"/></a>
         <button class="lien"><img src="' . $images . 'recherche.png" alt="Recherche"></button>
         </div>
-    </div> ';
-        
-        ?>
+    </div>
+</header>';
+?>

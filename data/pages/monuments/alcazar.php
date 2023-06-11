@@ -9,7 +9,6 @@ $_SESSION["location"] = "data/pages/monuments/";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="../../script/barre.js"></script>
     <link rel="stylesheet" href="../../style/style.css" />
     <link rel="stylesheet" href="../../style/monuments.css" />
@@ -18,14 +17,9 @@ $_SESSION["location"] = "data/pages/monuments/";
 </head>
 
 <body>
-    <header>
-        <?php
-        include('../header.inc.php');
-        ?>
-    </header>
-
-
-
+    <?php
+    include('../header.inc.php');
+    ?>
     <div class="flexboxcolonne">
         <div id="fond" style="background-image: url('../../images/monuments/alcazarfond.jpg');">
             <a id="boutonretour" href="../monuments.php">
@@ -41,7 +35,7 @@ $_SESSION["location"] = "data/pages/monuments/";
 
             <div class="contenu droite">
                 <p>
-                La tour de Calahorra est un vestige de l'histoire de Cordoue, en Espagne. Elle a été construite par les Maures au XIIe siècle pour défendre la ville contre les attaques ennemies. Au fil des siècles, la tour a subi des modifications et des rénovations, notamment sous le règne des rois chrétiens, qui ont ajouté des éléments décoratifs.
+                    La tour de Calahorra est un vestige de l'histoire de Cordoue, en Espagne. Elle a été construite par les Maures au XIIe siècle pour défendre la ville contre les attaques ennemies. Au fil des siècles, la tour a subi des modifications et des rénovations, notamment sous le règne des rois chrétiens, qui ont ajouté des éléments décoratifs.
                     <br><br>
                     Au XXe siècle, la tour de Calahorra a été restaurée et transformée en musée de la Tolérance. Le musée explore l'histoire de Cordoue en tant que ville multiculturelle et la coexistence pacifique entre les différentes religions qui ont habité la ville. Aujourd'hui, la tour de Calahorra est un site touristique populaire à Cordoue, offrant une vue panoramique sur la ville et un aperçu fascinant de l'histoire de l'Espagne médiévale.
                 </p>
@@ -75,8 +69,8 @@ $_SESSION["location"] = "data/pages/monuments/";
             </div>
         </div>
     </div>
-        <!-- Bouton retour en haut -->
-        <div class="retour">
+    <!-- Bouton retour en haut -->
+    <div class="retour">
         <a href="#" class="haut"></a>
     </div>
     <!-- Footer -->

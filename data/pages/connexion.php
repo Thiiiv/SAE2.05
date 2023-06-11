@@ -5,30 +5,26 @@ $_SESSION["location"] = "data/pages/";
 $_SESSION['ok'] = false;
 $_SESSION['email'] = null;
 $_SESSION['id'] = null;
-$_SESSION['statut'] = 'f';
-if ( (!isset($_POST['email'])) || (!isset($_POST['motdepasse'])) || $_POST['email'] == "" || $_POST['motdepasse'] == "" ) {
-    $_SESSION['ok'] = false;
-} else {
+$_SESSION['statut'] = null;
+if ( (isset($_POST['email'])) || (isset($_POST['motdepasse'])) || $_POST['email'] != "" || $_POST['motdepasse'] != "" ) {
 
+    //Vérification de l'entrée utilisateur
     if (!(preg_match("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]+$/", $_POST['email']))){
         header('location:connexion.php');
     }
-
-
-    $_SESSION['email'] = $_POST['email'];
  
     include('connexion.inc.php');
-    $cnx->query('set search_path to cordoue;');
     $requete = 
     "SELECT *
     FROM utilisateur
-    WHERE email = '" . $_SESSION['email'] . "'
+    WHERE email = '" . $_POST['email'] . "'
     and motdepasse = md5('" . $_POST['motdepasse'] . "');";
 
     $resultat = $cnx->query($requete);
     $resultat = $resultat->fetchAll()[0];
 
-    if ($resultat['email'] == $_SESSION['email']) {
+    // Connexion
+    if ($resultat['email'] == $_POST['email']) {
         $_SESSION['ok'] = true;
 
         $_SESSION['id'] = $resultat['id'];
@@ -51,9 +47,6 @@ if ( (!isset($_POST['email'])) || (!isset($_POST['motdepasse'])) || $_POST['emai
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Connexion</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- JS -->
     <script src="../script/barre.js"></script>
@@ -61,7 +54,7 @@ if ( (!isset($_POST['email'])) || (!isset($_POST['motdepasse'])) || $_POST['emai
 
     <!-- CSS -->
     <link rel="stylesheet" href="../style/style.css" />
-    <link rel="stylesheet" href="../style/connexion.css" /> 
+    <link rel="stylesheet" href="../style/formulaire.css" /> 
     <link rel="shotcut icon" href="../images/favicon.png">
 
 </head>
