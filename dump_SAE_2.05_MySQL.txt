@@ -1,0 +1,48 @@
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+CREATE SCHEMA cordoue;
+
+ALTER SCHEMA cordoue OWNER TO "lucas.merlin";
+
+SET default_tablespace = '';
+
+CREATE TABLE cordoue.evenements (
+    numevent INT(11) NOT NULL AUTO_INCREMENT,
+    titre VARCHAR(20) NOT NULL,
+    sous_titre VARCHAR(50) NOT NULL,
+    description TEXT NOT NULL,
+    lien TEXT NOT NULL,
+    PRIMARY KEY (numevent)
+);
+
+ALTER TABLE cordoue.evenements OWNER TO "lucas.merlin";
+
+CREATE TABLE cordoue.utilisateur (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    email VARCHAR(15) NOT NULL,
+    motdepasse CHAR(32) NOT NULL,
+    typeutilisateur TINYINT(1),
+    PRIMARY KEY (id),
+    UNIQUE KEY utilisateur_email_key (email)
+);
+
+ALTER TABLE cordoue.utilisateur OWNER TO "lucas.merlin";
+
+INSERT INTO cordoue.evenements (numevent, titre, sous_titre, description, lien) VALUES (1, 'Fête des patios', 'Fête annuelle, en mi-Mai', 'Cette fête consiste à installer dans les rues et sur les places de la ville, des croix faites de fleurs. Ces créations participent, en outre, à un concours organisé par la municipalité. Il s''agit d''une ancienne tradition religieuse. Ce sont les associations de quartier qui sont chargés de faire de Cordoue un tableau de couleurs et de fête. Les croix sont exposées toute la journée, et le soir l''ambiance est assurée par des spectacles de musique et de danse.', '../images/patios.jpg');
+INSERT INTO cordoue.evenements (numevent, titre, sous_titre, description, lien) VALUES (3, 'Noël', 'Fête annuelle, en fin Décembre', 'Noël à Cordoue est célébré principalement comme un événement religieux et familial. Les gens se réunissent généralement avec leur famille et leurs amis pour célébrer la naissance de Jésus. Les rues de Cordoue sont décorées avec des lumières et des décorations, les marchés de Noël sont organisés dans la ville, où les visiteurs peuvent acheter des cadeaux, des décorations et des spécialités locales.', '../images/noel.jpg');
+INSERT INTO cordoue.evenements (numevent, titre, sous_titre, description, lien) VALUES (4, 'Croix de Mai', 'Fête annuelle, en fin Avril', 'Cette fête consiste à installer dans les rues et sur les places de la ville, des croix faites de fleurs. Ces créations participent, en outre, à un concours organisé par la municipalité. Il s''agit d''une ancienne tradition religieuse. Ce sont les associations de quartier qui sont chargés de faire de Cordoue un tableau de couleurs et de fête. Les croix sont exposées toute la journée, et le soir l''ambiance est assurée par des spectacles de musique et de danse.', '../images/cruces.jpg');
+INSERT INTO cordoue.evenements (numevent, titre, sous_titre, description, lien) VALUES (2, 'Fête sainte', 'Fête annuelle, Fête annuelle, en début Avril', 'Spectacle coloré qui célèbre la culture et la religion de la ville. La célébration commence par un cortège des principales figures religieuses de la ville, accompagnées par des spectacles de musique et de danse. Le cortège se dirige ensuite vers la cathédrale où les gens peuvent admirer les statues et objets religieux. A la fin, des spectacles de musique et de danse s''ensuivent dans les rues de la ville.', '../images/fetesaine.jpg');
+
+INSERT INTO cordoue.utilisateur (id, email, motdepasse, typeutilisateur) VALUES (1, 'admin', 'a66edfd8dac2bbe9830e8f85be3054e8', 1);
+
+ALTER TABLE cordoue.evenements AUTO_INCREMENT = 5;
+ALTER TABLE cordoue.utilisateur AUTO_INCREMENT = 2;

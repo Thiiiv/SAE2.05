@@ -1,0 +1,151 @@
+/* Titre */
+        h1 {
+            margin-top: 15vh;
+            text-align: center;
+            width: 100%;
+            padding-top: 5vh;
+            font-size: 100px;
+            user-select: none;
+        }
+
+        /* Corps de la page (flexbox colonne qui prend les deux lignes)*/
+        .corps {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #505050;
+        }
+
+        /* Images des monuments */
+        .monument img {
+            margin: 0.9vw;
+            width: 20vw;
+            height: 60%;
+    
+            object-fit: cover;
+
+            border-radius: 10px 10px 10px 10px;
+            -webkit-border-radius: 10px 10px 10px 10px;
+            -moz-border-radius: 10px 10px 10px 10px;
+            -webkit-box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.75);
+            box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.75);
+
+        }
+
+        /* Texte de chaque monument */
+        .ligne-monuments p {
+            
+            width: 20vw;
+            font-size: 30px;
+            margin-top: 1vh;
+        }
+
+        /* Titre de chaque monument */
+        h3 {
+            padding-top:0.5vh;
+            text-align: center;
+            font-size: 1.8rem;
+            width: 100%;
+            background-color: #575453;
+        }
+
+        /* Ligne de 3 monuments */
+        .ligne-monuments {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            margin: 10px 10px;
+            padding-left: 1.5vw;
+            padding-right: 1.5vw;
+        }
+
+        /* div avec titre, image, texte du monument, Amène vers une autre page */
+        .monument {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            border: 4px outset #f7af3e;
+            margin: 1vw;
+            color: white;
+            text-decoration: none;
+            flex:1;
+       
+            background-color:#3a3a3a;
+            border-radius: 11px 11px 11px 11px;
+            -webkit-border-radius: 11px 11px 11px 11px;
+            -moz-border-radius: 11px 11px 11px 11px;
+            box-shadow: 0px 0px 11px 6px rgba(51, 51, 51, 0.52);
+            -webkit-box-shadow: 0px 0px 11px 6px rgba(51, 51, 51, 0.52);
+            -moz-box-shadow: 0px 0px 11px 6px rgba(51, 51, 51, 0.52);
+            transition: transform 0.2s;
+        }
+
+        /* Agrandissement du div des monuments */
+        .monument:hover {
+            transform: scale(1.08);
+            cursor: pointer;
+        }
+
+        .monument a {
+            position: relative;
+            float: right;
+        }
+
+        /* Image en dessous du titre */
+        .transition {
+            width: 50vw;
+            height: auto;
+            display: flex;
+            margin-right: auto;
+            margin-left: auto;
+            padding-bottom: 8vh;
+        }
+
+        @media screen and (max-width:901px) {
+            .ligne-monuments {
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+
+            .transition {
+                width: 75%;
+                height:10vh;
+                
+            }
+
+            .ligne-monuments p {
+                width: 95%;
+            }
+
+            .monuments img {
+                width: 100vw;
+            }
+
+            .monument img {
+                width: 60%;
+            }
+
+            .monument {
+                margin-top: 3vh;
+                width: 70vw;
+            }
+
+            .img {
+                border-radius: 10px 10px 10px 10px;
+                -moz-border-radius: 10px 10px 10px 10px;
+                -webkit-border-radius: 10px 10px 10px 10px;
+                border: 0px solid #000000;
+            }
+
+            .monuments h3 {
+                font-size: 24px;
+            }
+        }
