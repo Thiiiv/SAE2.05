@@ -36,7 +36,7 @@ if (isset($_SESSION['location'])) {
     if (isset($_SESSION['statut']) && $_SESSION['statut'] == 1){
         echo '<a href="' . $liens . 'gestionEvenements.php" class="lien">Evenements</a>';
     }
-    print_r($_SESSION);
+    //print_r($_SESSION);
     
     echo '<a href="' . $liens . 'histoire.php" class="lien">Histoire</a>
         <a href="' . $liens . 'monuments.php" class="lien">Monuments</a>
