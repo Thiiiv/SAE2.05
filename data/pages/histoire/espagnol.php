@@ -1,3 +1,7 @@
+<?php
+session_start();
+$_SESSION["location"] = "data/pages/histoire/";
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -43,7 +47,7 @@
     
     <!-- Barre horizontale -->
     <?php 
-        include('../headerPages.inc.html');
+        include('../header.inc.php');
     ?>
     
     <h1>Epoque espagnole</h1>
@@ -137,7 +141,7 @@
     </div>
     
     <?php 
-        include('../footerPages.inc.html');
+        include('../footerSousPages.inc.html');
     ?>
 </body>
 </html>

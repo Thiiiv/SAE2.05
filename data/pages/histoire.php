@@ -1,3 +1,7 @@
+<?php
+session_start();
+$_SESSION["location"] = "data/pages/";
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -16,7 +20,7 @@
 
 <body>
     <?php 
-    include('headerPages.inc.html');
+    include('header.inc.php');
     ?>
     <h1>Histoire</h1>
     <img class="transition" src="../images/sous_titre.png">
@@ -54,5 +58,9 @@
             </div>
         </a>
     </div>
+    
+    <?php 
+        include('footerPages.inc.html');
+    ?>
 </body>
 </html>

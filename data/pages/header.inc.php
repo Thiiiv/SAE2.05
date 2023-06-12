@@ -19,6 +19,11 @@ if (isset($_SESSION['location'])) {
             $liens = "../";
             $index = "../../../index.php";
             break;
+        case "data/pages/histoire/":
+            $images = "../../images/";
+            $liens = "../";
+            $index = "../../../index.php";
+            break;
     }
 }
 
@@ -41,7 +46,7 @@ if (isset($_SESSION['location'])) {
     echo '<a href="' . $liens . 'histoire.php" class="lien">Histoire</a>
         <a href="' . $liens . 'monuments.php" class="lien">Monuments</a>
         <div class="lien infos">
-            <a href="' . $liens . 'evenements.php">Informations Pratiques</a>
+            Informations Pratiques
                 <div class="info"> <a href="' . $liens . 'evenements.php">Evenements</a>
                     <a href="' . $liens . 'carte.php">Carte</a>
                 </div>
