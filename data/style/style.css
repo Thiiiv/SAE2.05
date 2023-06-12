@@ -498,7 +498,7 @@ nav .logo h1 {
     transform: scale(1.1);
     background-color: var(--main-bg-color2);
 }
-.menu .liens a:visited {
+.menu .liens a {
     color: white;
 }
 .menu img {
