@@ -39,18 +39,15 @@ if (isset($_SESSION['location'])) {
     ';
 
     if (isset($_SESSION['statut']) && $_SESSION['statut'] == 1){
-        echo '<a href="' . $liens . 'gestionEvenements.php" class="lien">Evenements</a>';
+        echo '<a href="' . $liens . 'gestionEvenements.php" class="lien">Gestion Evenements</a>';
+        echo '<div style="flex:10;margin-right:20vw;"></div>';
     }
     //print_r($_SESSION);
     
     echo '<a href="' . $liens . 'histoire.php" class="lien">Histoire</a>
         <a href="' . $liens . 'monuments.php" class="lien">Monuments</a>
-        <div class="lien infos">
-            Informations Pratiques
-                <div class="info"> <a href="' . $liens . 'evenements.php">Evenements</a>
-                    <a href="' . $liens . 'carte.php">Carte</a>
-                </div>
-        </div>
+        <a href="' . $liens . 'evenements.php"  class="lien">Evenements</a>
+        <a href="' . $liens . 'carte.php"  class="lien">Carte</a>
         <div class="lien langues">
         <a href="' . $index . '">Langues</a>
             <div class="langue">
