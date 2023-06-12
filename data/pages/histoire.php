@@ -43,12 +43,15 @@ $_SESSION["location"] = "data/pages/";
             <img src="../images/histoire/wisigoth.png">
         </div>
         </a>
-        <div class="button three">
-            <p>
-                Epoque musulmane
-            </p>
-            <img src="../images/histoire/musulman.png">
-        </div>
+        <a href="../pages/histoire/musulman.php">
+            <div class="button three">
+                <p>
+                    Epoque musulmane
+                </p>
+                <img src="../images/histoire/musulman.png">
+            </div>
+        </a>
+        
         <a href="../pages/histoire/espagnol.php">
             <div class="button four">
                 <p>
