@@ -102,7 +102,10 @@ if (isset($_POST['titre']) && isset($_POST['sous_titre']) && isset($_POST['descr
         $requete
     );
 
-    echo "<div style='margin-top:13vh;display:flex;justify-content:center'><h1>Gestion des événements</h1></div>
+    echo "
+    <div style='margin-top:13vh;display:flex;justify-content:center'>
+    <h1>Gestion des événements</h1>
+    </div>
     <div style='padding-top:10vh;display:flex;align-items:center;justify-content:center;flex-direction:column;'>
     <ul>
         <h2>Retirer des événements</h2>";
@@ -135,7 +138,7 @@ if (isset($_POST['titre']) && isset($_POST['sous_titre']) && isset($_POST['descr
                 Sous-Titre<br><input type="text" name="sous_titre" /><br/>
             </div>
             <div>
-                Description<br><input style="height:20vh;" type="text" name="description" /><br/>
+                Description<br><textarea style="height:20vh;width:20vw;" type="text" name="description" ></textarea><br/>
             </div>
             <div>
                 Lien de l'image<br><input type="text" name="lien" /><br/>
