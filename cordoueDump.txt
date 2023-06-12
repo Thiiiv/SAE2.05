@@ -17,7 +17,7 @@ SET default_tablespace = '';
 
 CREATE TABLE cordoue.evenements (
     numevent INT(11) NOT NULL AUTO_INCREMENT,
-    titre VARCHAR(20) NOT NULL,
+    titre VARCHAR(35) NOT NULL,
     sous_titre VARCHAR(50) NOT NULL,
     description TEXT NOT NULL,
     lien TEXT NOT NULL,
