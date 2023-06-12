@@ -55,7 +55,6 @@ h1 {
 }
 
 .image {
-    width: 50%;
     max-height: 50vh;
     border: 4px outset #f7af3e;
     border-radius: 10px;
