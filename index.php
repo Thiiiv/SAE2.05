@@ -1,7 +1,6 @@
 <?php
 session_start();
 $_SESSION["location"] = "root";
-
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -30,7 +29,18 @@ $_SESSION["location"] = "root";
 <body>
     
     <?php 
-    include('data/pages/header.inc.php');
+    if (!isset($_GET["langue"])) {
+        include('data/pages/header.inc.php');
+    }
+    else {
+        $langue = $_GET["langue"];
+        if ($langue == "fr") {
+            include('data/pages/header.inc.php');
+        }
+        elseif ($langue == "en") {
+            include('data/pages/ANGheader.inc.php');
+        }
+    }
     ?>
 
     <!-- Image -->
