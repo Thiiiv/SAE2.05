@@ -51,7 +51,6 @@ $_SESSION["location"] = "data/pages/";
                 <img src="../images/histoire/musulman.png">
             </div>
         </a>
-        
         <a href="../pages/histoire/espagnol.php">
             <div class="button four">
                 <p>

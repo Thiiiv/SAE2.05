@@ -22,31 +22,44 @@ $_SESSION["location"] = "data/pages/";
     <link rel="shotcut icon" href="../images/favicon.png">
     <style>
 
-        a{
-            font-size: 1.2rem;
-            color:dodgerblue;
+        .flexboxcolonne{ 
+            justify-content: left;
+            display: flex;
+            flex-direction: column;
         }
-
 
         h1 {
- 
-            font-size: 3rem;
+            margin-top: 15vh;
+            margin-bottom: 3vh;
+            padding-top: 5vh;
+            margin-left:10vw;
+            font-size: xx-large;
         }
 
-        .justify-left{
-            width: 100%;
-            align-items: baseline;
+        h2 {
+            margin-top: 10vh;
+            margin-bottom: 2vh;
+            margin-left:10vw;
+
         }
 
-        .mentions-legales{
-            margin-top:20vh;
-            width: 75%;
+
+
+        .partie {
+            width: 65%;
+            margin-left:12%;
         }
 
-        .mentions-partie{
-            padding: 5vw;
-            width: 100%;
+        .listepartie {
+            justify-content: center;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            margin-left: 23vh;
+        }
 
+        .listepartie li {
+            padding-top: 1vh;
         }
 
     </style>
@@ -57,36 +70,41 @@ $_SESSION["location"] = "data/pages/";
     include('header.inc.php');
     ?>
 
-    <div class="flexboxcol">
-    <div class="flexboxcol mentions-legales">
-        <h1>Mentions légales</h1>
-        <hr id="hrtitre">
+    <div class="flexboxcolonne">
+    <h1>Mentions légales</h1>
+    <hr id="hrtitre">
 
-        <div class="flexboxcol mentions-partie">
-            <h2>Notre projet</h2>
-            <p>
-Dans le cadre d’un projet en première année de BUT Informatique à L’Université Gustave Eiffel,
-nous avons pour objectif de créer un site dynamique, en HTML, CSS, JS, PHP, SQL
-pour mettre en valeur le patrimoine de la ville de Cordoue, située en Espagne.
-En partenariat avec l'UNESCO.
-            </p>
+    <h2>Unesco</h2>
+    <hr class="partie">
+    <ul class="listepartie">
+        <li>Ce site web est un projet en partenariat avec l'UNESCO</li>
 
-        </div>
+    </ul>
 
 
-        <div class="flexboxcol mentions-partie ">
-        <h2>Sources</h2>
-        <ul class="flexboxcol justify-left">
-            <li><a href="https://favicon.io/">Flavicon</a> pour les images</li>
-            <li><a href="https://twitter.com">Twitter</a> pour l'API</li>
-            <li><a href="https://www.google.fr/maps">Google Maps</a> pour l'API</li>
-            <li><a href="https://creativecommons.org/licenses/?lang=fr-FR">Creative Commons</a> pour des images</li>
+    <h2>Crédits</h2>
+    <hr class="partie">
+    <ul class="listepartie">
+        <li><a href="https://favicon.io/">Flavicon</a></li>
+        <li><a href="https://twitter.com">Twitter</a> pour l'API</li>
+        <li><a href="https://www.google.fr/maps">Google Maps</a> pour l'API</li>
 
-        </ul>
-        </div>
+    </ul>
+
+    <h2>Droits d'auteur</h2>
+    <hr class="partie">
+    <ul class="listepartie">
+        <li>test</li>
+        <li>test</li>
+        <li>test</li>
+    </ul>
+    
+
+
+
 
     </div>
-    </div>
+    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
     <?php 
     include('footerPages.inc.html');
     ?>

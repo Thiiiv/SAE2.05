@@ -34,17 +34,17 @@ if (isset($_SESSION['location'])) {
     ';
 
     if (isset($_SESSION['statut']) && $_SESSION['statut'] == 1){
-        echo '<a href="' . $liens . 'gestionEvenements.php" class="lien">Gestion Evenements</a>';
+        echo '<a href="' . $liens . 'gestionEvenements.php" class="lien">Event Management</a>';
         echo '<div style="flex:10;margin-right:20vw;"></div>';
     }
     //print_r($_SESSION);
     
-    echo '<a href="' . $liens . 'histoire.php" class="lien">Histoire</a>
+    echo '<a href="' . $liens . 'histoire.php" class="lien">History</a>
         <a href="' . $liens . 'monuments.php" class="lien">Monuments</a>
-        <a href="' . $liens . 'evenements.php"  class="lien">Evenements</a>
-        <a href="' . $liens . 'parcours.php"  class="lien">Parcours</a>
+        <a href="' . $liens . 'evenements.php"  class="lien">Events</a>
+        <a href="' . $liens . 'parcours.php"  class="lien">Routes</a>
         <div class="lien langues">
-        <a href="?langue="fr"">Langues</a>
+        <a href="' . $index . '">Language</a>
             <div class="langue">
                 <a href="?langue=fr">Français</a>
                 <a href="?langue=en">English</a>
