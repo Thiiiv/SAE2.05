@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION["location"] = "data/pages/monuments/";
+include("../traduction.inc.php");
 ?>
 <!DOCTYPE html>
 <html lang="fr">
