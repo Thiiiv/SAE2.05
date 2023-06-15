@@ -32,7 +32,7 @@ $_SESSION["location"] = "data/pages/";
 
             <div id = "parcoursjourContent">
                 <iframe 
-                    src="https://www.google.com/maps/d/u/1/embed?mid=1gWTG1PSf3nY-EOmtTNPShk5pwrFEINk&ehbc=2E312F"
+                    src="https://www.google.com/maps/d/u/0/embed?mid=1gWTG1PSf3nY-EOmtTNPShk5pwrFEINk&ehbc=2E312F"
                     width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
@@ -41,7 +41,7 @@ $_SESSION["location"] = "data/pages/";
 
             <div id = "parcoursheureContent">
             <iframe 
-                src="https://www.google.com/maps/d/u/1/embed?mid=16O2kW77U6U9c11OK1zmOwLUERHl3quc&ehbc=2E312F"
+                src="https://www.google.com/maps/d/u/0/embed?mid=16O2kW77U6U9c11OK1zmOwLUERHl3quc&ehbc=2E312F"
                 width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>

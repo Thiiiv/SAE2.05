@@ -19,7 +19,8 @@ if (isset($_POST['numEvent'])) {
     header('location:gestionEvenements.php');
 }
 
-if (isset($_POST['titre']) && isset($_POST['sous_titre']) && isset($_POST['description']) && isset($_POST['titre'])){
+if (isset($_POST['titre']) && isset($_POST['sous_titre']) && isset($_POST['description']) && isset($_POST['lien'])
+    && isset($_POST['titreEN']) && isset($_POST['sous_titreEN']) && isset($_POST['descriptionEN'])){
 
     function securiseDonnee($donnees){
         $donnees = trim($donnees);
@@ -45,11 +46,14 @@ if (isset($_POST['titre']) && isset($_POST['sous_titre']) && isset($_POST['descr
 
     include('connexion.inc.php');
     $requete =
-    "INSERT INTO evenements (titre, sous_titre, description, lien)
+    "INSERT INTO evenements (titre, title, sous_titre, subtitle, description, descriptionen, lien)
     VALUES ('".
     securiseDonnee($_POST['titre'])."','".
+    securiseDonnee($_POST['title'])."','".
     securiseDonnee($_POST['sous_titre'])."','".
+    securiseDonnee($_POST['subtitle'])."','".
     ajouterGuillemets(securiseDonnee($_POST['description']))."','".
+    ajouterGuillemets(securiseDonnee($_POST['descriptionen']))."','".
     securiseDonnee($_POST['lien'])."');";
 
     $cnx->exec($requete);
@@ -102,7 +106,10 @@ if (isset($_POST['titre']) && isset($_POST['sous_titre']) && isset($_POST['descr
         $requete
     );
 
-    echo "<div style='margin-top:13vh;display:flex;justify-content:center'><h1>Gestion des événements</h1></div>
+    echo "
+    <div style='margin-top:13vh;display:flex;justify-content:center'>
+    <h1>Gestion des événements</h1>
+    </div>
     <div style='padding-top:10vh;display:flex;align-items:center;justify-content:center;flex-direction:column;'>
     <ul>
         <h2>Retirer des événements</h2>";
@@ -132,10 +139,19 @@ if (isset($_POST['titre']) && isset($_POST['sous_titre']) && isset($_POST['descr
                 Titre<br><input type="text" name="titre" /><br/>
             </div>
             <div>
+                Titre (anglais)<br><input type="text" name="titreEN" /><br/>
+            </div>
+            <div>
                 Sous-Titre<br><input type="text" name="sous_titre" /><br/>
             </div>
             <div>
-                Description<br><input style="height:20vh;" type="text" name="description" /><br/>
+                Sous-Titre (anglais)<br><input type="text" name="sous_titreEN" /><br/>
+            </div>
+            <div>
+                Description<br><textarea style="height:20vh;width:20vw;" type="text" name="description" ></textarea><br/>
+            </div>
+            <div>
+                Description (anglais)<br><textarea style="height:20vh;width:20vw;" type="text" name="descriptionEN" ></textarea><br/>
             </div>
             <div>
                 Lien de l'image<br><input type="text" name="lien" /><br/>
@@ -148,7 +164,7 @@ if (isset($_POST['titre']) && isset($_POST['sous_titre']) && isset($_POST['descr
 
 
     <?php 
-    include('footerPages.inc.html');
+    include('footer.inc.php');
     ?>
     
 </body>

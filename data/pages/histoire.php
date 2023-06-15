@@ -62,7 +62,7 @@ $_SESSION["location"] = "data/pages/";
     </div>
     
     <?php 
-        include('footerPages.inc.html');
+        include('footer.inc.php');
     ?>
 </body>
 </html>

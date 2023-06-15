@@ -498,7 +498,6 @@ nav .logo h1 {
     width: auto;
 }
 .menu .liens img:not(.langue img) {
-    filter: brightness(3);
     height: 3.5vh;
 }
 .menu .lien {

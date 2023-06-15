@@ -38,20 +38,9 @@ else {
 
 <body>
     <?php 
-    if (!isset($_GET["langue"])) {
         include('header.inc.php');
-    }
-    else {
-        $langue = $_GET["langue"];
-        if ($langue == "fr") {
-            include('header.inc.php');
-        }
-        elseif ($langue == "en") {
-            include('ANGheader.inc.php');
-        }
-    }
     ?>
-
+    
     <h1>Évènements</h1>
 
     <div class="flexboxrow">
@@ -88,7 +77,7 @@ else {
     ?>
     </div>
     <?php 
-    include('footerPages.inc.html');
+    include('footer.inc.php');
     ?>
     
 </body>
