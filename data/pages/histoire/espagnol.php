@@ -54,7 +54,7 @@ $_SESSION["location"] = "data/pages/histoire/";
     <img class="transition titre" src="../../images/sous_titre.png">
     <div class="container-page">
         <div class="container-event">
-            <img class="image" src="../../images/histoire/espagnol/ferdinandIII.webp" alt="Ferdinand III de Castille">
+            <img class="image" src="../../images/histoire/espagnol/ferdinandIII.jpg" alt="Ferdinand III de Castille">
             <div class="container-texts">
                 <h3>La Reconquista</h3>
                 <img class="transition reverse-transition" src="../../images/sous_titre.png">
@@ -109,7 +109,7 @@ $_SESSION["location"] = "data/pages/histoire/";
             </div>
         </div>
         <div class="container-event">
-            <img class="image" src="../../images/histoire/espagnol/universite.webp" alt="Université de Cordoue">
+            <img class="image" src="../../images/histoire/espagnol/universite.jpg" alt="Université de Cordoue">
             <div class="container-texts">
                 <h3>L'ouverture culturelle</h3>
                 <img class="transition reverse-transition" src="../../images/sous_titre.png">

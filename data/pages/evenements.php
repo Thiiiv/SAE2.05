@@ -1,6 +1,18 @@
 <?php
 session_start();
 $_SESSION["location"] = "data/pages/";
+$jsonData = file_get_contents('../json/fr.json');
+$translations = json_decode($jsonData, true);
+if (isset($_GET["langue"])) {
+    $langue = $_GET["langue"];
+    if ($langue == "en") {
+        $jsonData = file_get_contents('../json/ang.json');
+        $translations = json_decode($jsonData, true);
+    }
+}
+else {
+    $langue = "fr";
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -26,7 +38,18 @@ $_SESSION["location"] = "data/pages/";
 
 <body>
     <?php 
-    include('header.inc.php');
+    if (!isset($_GET["langue"])) {
+        include('header.inc.php');
+    }
+    else {
+        $langue = $_GET["langue"];
+        if ($langue == "fr") {
+            include('header.inc.php');
+        }
+        elseif ($langue == "en") {
+            include('ANGheader.inc.php');
+        }
+    }
     ?>
 
     <h1>Évènements</h1>

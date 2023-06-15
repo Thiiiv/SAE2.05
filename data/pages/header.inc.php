@@ -16,18 +16,7 @@ if (isset($_SESSION['location'])) {
             break;
     }
 }
-$jsonData = file_get_contents("$liens../json/fr.json");
-$translations = json_decode($jsonData, true);
-if (isset($_GET["langue"])) {
-    $langue = $_GET["langue"];
-    if ($langue == "en") {
-        $jsonData = file_get_contents("$liens../json/ang.json");
-        $translations = json_decode($jsonData, true);
-    }
-}
-if (!isset($_GET["langue"])) {
-    $langue = "fr";
-}
+include("traduction.inc.php");
 ?>
 
 <header>
@@ -54,8 +43,8 @@ if (!isset($_GET["langue"])) {
             <div class="langues">
                 <a href="?langue=fr" class="lien"><?php echo $translations["langue"];?></a>
                     <div class="langue">
-                        <a href="?langue=fr" class="lien"><img src="../images/fr.png" alt="FR"></a>
-                        <a href="?langue=en" class="lien"><img src="../images/eng.png" alt="EN"></a>
+                        <a href="?langue=fr" class="lien"><img src="<?php echo $images.'fr.png';?>" alt="FR"></a>
+                        <a href="?langue=en" class="lien"><img src="<?php echo $images.'eng.png';?>" alt="EN"></a>
                     </div>
             </div>
             <a href="<?php echo $liens.'connexion.php?langue=' . $langue;?>" class="lien"><img src="<?php echo $images.'connect.png';?>" alt="connexion" id="connexion"/></a>

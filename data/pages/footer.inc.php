@@ -37,7 +37,7 @@ echo '
         <div class="lien-utile">
             <a href="#title-utile" id="title-utile">Liens utiles</a>
             <br>
-            <a href="https://twitter.com/CordoueWeb"><img src= '.$images.'"twitter.webp" alt="Twitter" id="twitter"></a>
+            <a href="https://twitter.com/CordoueWeb"><img src="'.$images.'twitter.webp" alt="Twitter" id="twitter"></a>
         </div>
         <div class="ecole">
             <a href="#title-ecole" id="title-ecole">Notre école</a>
