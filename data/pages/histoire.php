@@ -13,7 +13,6 @@ include("traduction.inc.php");
     <script src="../script/barre.js"></script>
     <script src="../script/menulateral.js"></script>
     <link rel="stylesheet" href="../style/style.css" />
-    <link rel="stylesheet" href="../style/monuments.css" />
     <link rel="stylesheet" href="../style/histoire.css" />
     <link rel="shotcut icon" href="../images/favicon.png">
     <title><?php echo $translations["histoire"] ?></title>

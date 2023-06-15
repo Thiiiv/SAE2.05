@@ -27,39 +27,32 @@ if (isset($_SESSION['location'])) {
     }
 }
 include("traduction.inc.php");
+?>
 
-echo '
 <div id="retour">
     <a href="#" class="haut"></a>
 </div>
-
 <div class="footer">
     <div class="first-part">
         <div class="lien-utile">
-            <a href="#title-utile" id="title-utile">' . $translations["liens"] . '</a>
-            <br>
-            <a href="https://twitter.com/CordoueWeb"><img src="'.$images.'twitter.webp" alt="Twitter" id="twitter"></a>
+            <a href="#title-utile" id="title-utile"><?php echo $translations["liens"];?></a>
+            <a href="https://twitter.com/CordoueWeb"><img src="<?php echo $images.'twitter.webp';?>" alt="Twitter" id="twitter"></a>
         </div>
-        <div class="ecole">
-            <a href="#title-ecole" id="title-ecole">' . $translations["ecole"] . '</a>
-            <br>
+        <div class="ecole"> 
+            <a href="https://www.univ-gustave-eiffel.fr/" id="title-ecole"><?php echo $translations["ecole"];?></a>
             <a href="https://iut.univ-gustave-eiffel.fr/">IUT de Marne-la-Vallée</a>
         </div>
         <div class="mention">
-            <a href="#title-mention" id="title-mention">' . $translations["mentions"] . '</a>
-            <br>
+            <a href="<?php echo $liens.'mentionslegales.php';?>" id="title-mention"><?php echo $translations["mentions"];?></a>
             <p>© 2022/2023</p>
         </div>
     </div>
     <div class="second-part">
-        <div class="partenaire">
-            <img src="'.$images.'Univ.png" />
-            <img src="'.$images.'unsplash.png" />
-            <img src="'.$images.'pexels.png" />
-            <img src="'.$images.'unesco_vrai.png" />
-        </div>
+        <img src="<?php echo $images.'Univ.png';?>" />
+        <img src="<?php echo $images.'unsplash.png';?>" />
+        <img src="<?php echo $images.'pexels.png';?>" />
+        <img src="<?php echo $images.'unesco_vrai.png';?>" />
     </div>
 </div>
 
-<script src="'.$liens .'../script/boutonhaut.js"></script>';
-?>
+<script src="<?php echo $liens .'../script/boutonhaut.js';?>"></script>

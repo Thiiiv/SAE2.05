@@ -73,6 +73,14 @@ En partenariat avec l'UNESCO.
 
         </div>
 
+        <div class="flexboxcol mentions-partie">
+            <h2>Contact</h2>
+            <p>
+        Chef de projet : Cherak Rabah Mehdi<br>
+Adresse email : mehdi.che.berlioz@gmail.com<br>
+Numéro de téléphone : 07 68 62 30 44
+            </p>
+        </div>
 
         <div class="flexboxcol mentions-partie ">
         <h2>Sources</h2>

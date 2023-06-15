@@ -1,57 +1,40 @@
-#slideshow {
-  overflow: hidden;
-  height: 510px;
-  width: 728px;
-  margin: 0 auto;
-  left: 0;
-  margin-left: 0;
-  text-align: left;
+.accueil-content, .page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
 }
-
-
-.slide-wrapper {
-  width: 2912px;
-  animation: slide 18s ease infinite;
-}
-
-.slide {
-  float: left;
-  height: 510px;
-  width: 728px;
+.page {
+  height: fit-content;
+  margin: 2vh 0;
+  text-align: center;
 }
 .accueil-content {
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background-image: url("../images/fond.png");
-  z-index: -5;
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-align: center;
-  line-height: 100vh;
+  margin-top: 5vh;
 }
-
-#foreground {
-  z-index: 0;
-  overflow-x: hidden;
-  position: fixed;
-  height: 90%;
-  bottom: 0;
-  width: 100%;
-  right: 0;
-  left: 0;
-  filter: blur(10px);
-}
-
-#title-behind-img {
-  font-size: 10vw;
+.accueil-content span {
+  font-size: 5rem;
+  font-weight: bold;
   font-family: 'Dyno', sans-serif;
-  position: relative;
-  z-index: 1;
-  margin: 0;
-  text-shadow: 5px 5px 5px black;
   user-select: none;
   cursor: pointer;
+}
+
+.fil_twitter {
+  width: 100%;
+}
+
+#background {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  animation: blur-effect 5s infinite alternate both;
 }
 
 @keyframes slide {
@@ -81,5 +64,16 @@
 
   90% {
     margin-left: -2184px;
+  }
+}
+
+@keyframes blur-effect {
+  from {
+    filter: blur(3px);
+    transform: scale(1);
+  }
+  to {
+    filter: blur(10px);
+    transform: scale(1.05);
   }
 }

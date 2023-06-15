@@ -47,7 +47,7 @@ if ( (isset($_POST['email'])) && (isset($_POST['motdepasse'])) && $_POST['email'
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Connexion</title>
+    <title><?php echo $translations["connexion"] ?></title>
 
     <!-- JS -->
     <script src="../script/barre.js"></script>

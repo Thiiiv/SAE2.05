@@ -48,7 +48,7 @@ if ( (!isset($_POST['email'])) || (!isset($_POST['motdepasse'])) || $_POST['emai
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Monument</title>
+    <title><?php echo $translations["inscription"] ?></title>
     <!-- JS -->
     <script src="../script/barre.js"></script>
     <script src="../script/menulateral.js"></script>
