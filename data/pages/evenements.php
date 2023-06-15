@@ -41,10 +41,11 @@ else {
         include('header.inc.php');
     ?>
     
-    <h1>Évènements</h1>
+    <h1><?php echo $translations["evenements"] ?></h1>
+    <img class="transition" src="../images/sous_titre.png">
+
 
     <div class="flexboxrow">
-
     <?php
 
     include('connexion.inc.php');

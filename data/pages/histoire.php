@@ -22,7 +22,7 @@ $_SESSION["location"] = "data/pages/";
     <?php 
     include('header.inc.php');
     ?>
-    <h1>Histoire</h1>
+     <h1><?php echo $translations["histoire"] ?></h1>
     <img class="transition" src="../images/sous_titre.png">
     
     <div class="zone">
