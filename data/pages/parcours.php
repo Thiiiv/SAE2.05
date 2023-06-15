@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION["location"] = "data/pages/";
+include("traduction.inc.php");
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -11,7 +12,7 @@ $_SESSION["location"] = "data/pages/";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Carte</title>
+    <title><?php echo $translations["parcours"] ?></title>
     <!-- JS -->
     <script src="../script/barre.js"></script>
     <script src="../script/menulateral.js"></script>
@@ -32,30 +33,30 @@ $_SESSION["location"] = "data/pages/";
 
             <div id = "parcoursjourContent">
                 <iframe 
-                    src="https://www.google.com/maps/d/u/0/embed?mid=1gWTG1PSf3nY-EOmtTNPShk5pwrFEINk&ehbc=2E312F"
+                    src="https://www.google.com/maps/d/u/1/embed?mid=1gWTG1PSf3nY-EOmtTNPShk5pwrFEINk&ehbc=2E312F"
                     width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
-                <p class="dyno-rem"> Parcours sur toute une journée</p>
+                <p class="dyno-rem"> <?php echo $translations["jour"] ?></p>
             </div>
 
             <div id = "parcoursheureContent">
             <iframe 
-                src="https://www.google.com/maps/d/u/0/embed?mid=16O2kW77U6U9c11OK1zmOwLUERHl3quc&ehbc=2E312F"
+                src="https://www.google.com/maps/d/u/1/embed?mid=16O2kW77U6U9c11OK1zmOwLUERHl3quc&ehbc=2E312F"
                 width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
-            <p class="dyno-rem"> Parcours sur quelques heures</p>
+            <p class="dyno-rem"> <?php echo $translations["heure"] ?></p>
             </div>
         </div>
     </section>
     <section class="choix-parcours">
         <div class="flexboxrow space">
             <button class="button-parcours" id="parcoursjour">
-                <p class="dyno-rem"> Parcours sur une journée</p>
+                <p class="dyno-rem"> <?php echo $translations["jour"] ?></p>
             </button>
             <button class="button-parcours" id="parcoursheure">
-            <p class="dyno-rem"> Parcours sur quelques heures</p>
+            <p class="dyno-rem"> <?php echo $translations["heure"] ?></p>
             </button>
 
 

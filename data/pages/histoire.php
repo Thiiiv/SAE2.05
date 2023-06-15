@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION["location"] = "data/pages/";
+include("traduction.inc.php");
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -15,47 +16,39 @@ $_SESSION["location"] = "data/pages/";
     <link rel="stylesheet" href="../style/monuments.css" />
     <link rel="stylesheet" href="../style/histoire.css" />
     <link rel="shotcut icon" href="../images/favicon.png">
-    <title>Histoire</title>
+    <title><?php echo $translations["histoire"] ?></title>
 </head>
 
 <body>
     <?php 
     include('header.inc.php');
     ?>
-     <h1><?php echo $translations["histoire"] ?></h1>
+    <h1><?php echo $translations["histoire"] ?></h1>
     <img class="transition" src="../images/sous_titre.png">
     
     <div class="zone">
         <img src="../images/histoire/arbre-vie.png">
-        <a href="../pages/histoire/romain.php">
+        <a href="<?php echo '../pages/histoire/romain.php?langue=' . $langue;?>">
            <div class="button one">
-                <p>
-                    Epoque romaine
-                </p>
+                <p><?php echo $translations["romain"] ?></p>
                 <img src="../images/histoire/romaine.png">
             </div> 
         </a>
-        <a href="../pages/histoire/wisigoth.php">
+        <a href="<?php echo '../pages/histoire/wisigoth.php?langue=' . $langue;?>">
         <div class="button two">
-            <p>
-                Epoque wisigoth
-            </p>
+            <p><?php echo $translations["wisigoth"] ?></p>
             <img src="../images/histoire/wisigoth.png">
         </div>
         </a>
-        <a href="../pages/histoire/musulman.php">
+        <a href="<?php echo '../pages/histoire/musulman.php?langue=' . $langue;?>">
             <div class="button three">
-                <p>
-                    Epoque musulmane
-                </p>
+                <p><?php echo $translations["musulman"] ?></p>
                 <img src="../images/histoire/musulman.png">
             </div>
         </a>
-        <a href="../pages/histoire/espagnol.php">
+        <a href="<?php echo '../pages/histoire/espagnol.php?langue=' . $langue;?>">
             <div class="button four">
-                <p>
-                    Epoque espagnol
-                </p>
+                <p><?php echo $translations["espagnol"] ?></p>
                 <img src="../images/histoire/espagne2.png">
             </div>
         </a>

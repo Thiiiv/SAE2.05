@@ -1,18 +1,8 @@
 <?php
 session_start();
 $_SESSION["location"] = "data/pages/";
-$jsonData = file_get_contents('../json/fr.json');
-$translations = json_decode($jsonData, true);
-if (isset($_GET["langue"])) {
-    $langue = $_GET["langue"];
-    if ($langue == "en") {
-        $jsonData = file_get_contents('../json/ang.json');
-        $translations = json_decode($jsonData, true);
-    }
-}
-else {
-    $langue = "fr";
-}
+include("traduction.inc.php");
+?>
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -22,7 +12,7 @@ else {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Evenements</title>
+    <title><?php echo $translations["evenements"] ?></title>
 
     <!-- JS -->
     <script src="../script/barre.js"></script>
@@ -49,9 +39,19 @@ else {
     <?php
 
     include('connexion.inc.php');
+
+    $titleTable = "titre";
+    $subtitleTable = "sous_titre";
+    $descriptionTable = "description";
+    if ($langue = "en"){
+        $titleTable = "title";
+        $subtitleTable = "subtitle";
+        $descriptionTable = "descriptionen";
+    }
+
     $requete = 
     "SELECT
-    titre, sous_titre, description, lien
+    ".$titleTable.", ".$subtitleTable.", ".$descriptionTable.", lien 
     FROM evenements;";
 
     $cnx->exec("set search_path to cordoue;");
@@ -67,9 +67,9 @@ else {
         <div class='boite'>
             <img class='photoevent' src=".$ligne->lien.">
             <div class='texteevent'>
-                <h4 class='titreevent'>".$ligne->titre."</h4>
-                <h4 class='soustitreevent'>".$ligne->sous_titre."</h4>
-                <p>".$ligne->description."</p>
+                <h4 class='titreevent'>".$ligne->$titleTable."</h4>
+                <h4 class='soustitreevent'>".$ligne->$subtitleTable."</h4>
+                <p>".$ligne->$descriptionTable."</p>
             </div>
         </div>";
     }

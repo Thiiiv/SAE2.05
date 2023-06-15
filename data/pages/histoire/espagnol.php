@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION["location"] = "data/pages/histoire/";
+include("../traduction.inc.php");
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -11,7 +12,7 @@ $_SESSION["location"] = "data/pages/histoire/";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Epoque espagnole</title>
+    <title><?php echo $translations["espagnol"] ?></title>
 
     <!-- JS -->
     <script src="../../script/barre.js"></script>
@@ -50,98 +51,61 @@ $_SESSION["location"] = "data/pages/histoire/";
         include('../header.inc.php');
     ?>
     
-    <h1>Epoque espagnole</h1>
+    <h1><?php echo $translations["espagnol"];?></h1>
     <img class="transition titre" src="../../images/sous_titre.png">
     <div class="container-page">
         <div class="container-event">
             <img class="image" src="../../images/histoire/espagnol/ferdinandIII.jpg" alt="Ferdinand III de Castille">
             <div class="container-texts">
-                <h3>La Reconquista</h3>
+                <h3><?php echo $translations["reconquista"] ?></h3>
                 <img class="transition reverse-transition" src="../../images/sous_titre.png">
-                <div class="text">
-                    Prise de Cordoue par Ferdinand III de Castille (1236) <hr>
-                    Après plusieurs siècles de domination musulmane, Cordoue est conquise par Ferdinand III de Castille en 1236. 
-                    Cette victoire marque la fin de la période de gouvernance islamique dans la région et ouvre la voie à l'établissement du pouvoir chrétien. 
-                    Ferdinand III consolide ainsi son règne en Castille et joue un rôle clé dans la Reconquista, la reconquête progressive des territoires musulmans par les chrétiens.
-                </div>
+                <div class="text"><?php echo $translations["reconquista_div"];?></div>
             </div>
         </div>
         <div class="container-event reverse-event">
             <img class="image" src="../../images/histoire/espagnol/cathedrale.jpg" alt="Mosquée cathédrale de Cordoue">
             <div class="container-texts">
-                <h3>La Grande Mosquée devient une cathédrale</h3>
+                <h3><?php echo $translations["mosquee"] ?></h3>
                 <img class="transition reverse-transition" src="../../images/sous_titre.png">
-                <div class="text">
-                    Conversion de la Mosquée de Cordoue en Cathédrale (1238) <hr>
-                    Après la prise de Cordoue, la Grande Mosquée, qui avait été construite à l'origine au VIIIe siècle par les Omeyyades, est convertie en cathédrale. 
-                    Cette transformation symbolise la suprématie chrétienne sur la ville et marque un tournant dans l'histoire de Cordoue. 
-                    Des éléments chrétiens, tels que la chapelle principale, sont ajoutés à la structure existante, 
-                    mélangeant ainsi les styles architectural islamique et chrétien.
-                </div>
+                <div class="text"><?php echo $translations["mosquee_div"] ?></div>
             </div>
         </div>
         <div class="container-event">
             <img class="image" src="../../images/histoire/espagnol/gothique.png" alt="Architecture Gothique">
             <div class="container-texts">
-                <h3>Le développement de l'architecture gothique</h3>
+                <h3><?php echo $translations["gothique"] ?></h3>
                 <img class="transition reverse-transition" src="../../images/sous_titre.png">
-                <div class="text">
-                    Construction de la Cathédrale de Cordoue (vers 1238-1600) <hr>
-                    Après la conversion de la Grande Mosquée en cathédrale, des travaux de construction sont entrepris pour ériger une nouvelle cathédrale à Cordoue. 
-                    Au fil des siècles, différents architectes apportent des modifications et des ajouts à l'édifice, 
-                    incorporant progressivement des éléments du style gothique. 
-                    Cela donne naissance à une cathédrale unique qui reflète l'évolution de l'architecture religieuse au fil du temps.
-                </div>
+                <div class="text"><?php echo $translations["gothique_div"] ?></div>
             </div>
         </div>
         <div class="container-event reverse-event">
             <img class="image" src="../../images/histoire/espagnol/decret.jpg" alt="Décret d'expulsion des juifs et Morisques">
             <div class="container-texts">
-                <h3>Les persécutions contre les juifs et les musulmans</h3>
+                <h3><?php echo $translations["persecutions"] ?></h3>
                 <img class="transition reverse-transition" src="../../images/sous_titre.png">
-                <div class="text">
-                    Décret d'expulsion des Juifs (1492) et Morisques (1609) <hr>
-                    Au cours de cette période, l'Inquisition espagnole exerce une pression croissante sur les Juifs et les musulmans de Cordoue pour qu'ils se convertissent au christianisme. 
-                    En 1492, les Juifs sont expulsés d'Espagne par le décret d'Alhambra, et de nombreux Juifs de Cordoue sont contraints de quitter la ville. 
-                    En 1609, les Morisques, les musulmans convertis de force, subissent le même sort avec le décret d'expulsion des Morisques. 
-                    Ces événements marquent la fin de la présence significative des communautés juives et musulmanes à Cordoue.
-                </div>
+                <div class="text"><?php echo $translations["persecutions_div"] ?></div>
             </div>
         </div>
         <div class="container-event">
             <img class="image" src="../../images/histoire/espagnol/universite.jpg" alt="Université de Cordoue">
             <div class="container-texts">
-                <h3>L'ouverture culturelle</h3>
+                <h3><?php echo $translations["ouverture"] ?></h3>
                 <img class="transition reverse-transition" src="../../images/sous_titre.png">
-                <div class="text">
-                    Fondation de l'Université de Cordoue (1972) <hr>
-                    En 1972, l'Université de Cordoue est fondée, marquant un tournant important dans l'histoire de la ville. 
-                    L'université devient un centre d'éducation supérieure, attirant des étudiants nationaux et internationaux. 
-                    Cela contribue à l'ouverture culturelle de Cordoue, stimule la recherche, encourage les échanges intellectuels 
-                    et favorise le développement des arts, des sciences et des connaissances dans la région.
-                </div>
+                <div class="text"><?php echo $translations["ouverture_div"] ?></div>
             </div>
         </div>
         <div class="container-event reverse-event">
             <img class="image" src="../../images/histoire/espagnol/unesco.png" alt="Logo de l'UNESCO">
             <div class="container-texts">
-                <h3>La renommée mondiale</h3>
+                <h3><?php echo $translations["renommee"] ?></h3>
                 <img class="transition reverse-transition" src="../../images/sous_titre.png">
-                <div class="text">
-                    L'inscription de la Mezquita-Catedral sur la liste du patrimoine mondial de l'UNESCO (1984) <hr>
-                    La Mezquita-Catedral de Cordoue, un monument emblématique de la ville, 
-                    est inscrite sur la liste du patrimoine mondial de l'UNESCO en 1984. 
-                    Ce site unique combine des éléments architecturaux islamiques et chrétiens, 
-                    témoignant de l'histoire complexe et des influences multiples de Cordoue. 
-                    Cette reconnaissance internationale renforce la renommée mondiale de la ville en tant que destination culturelle et touristique, 
-                    attirant des visiteurs du monde entier pour admirer sa splendeur architecturale et son héritage historique.
-                </div>
+                <div class="text"><?php echo $translations["renommee_div"] ?></div>
             </div>
         </div>
     </div>
     
     <?php 
-        include('../footerSousPages.inc.html');
+        include('../footer.inc.php');
     ?>
 </body>
 </html>

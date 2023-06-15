@@ -26,6 +26,7 @@ if (isset($_SESSION['location'])) {
             break;
     }
 }
+include("traduction.inc.php");
 
 echo '
 <div id="retour">
@@ -35,17 +36,17 @@ echo '
 <div class="footer">
     <div class="first-part">
         <div class="lien-utile">
-            <a href="#title-utile" id="title-utile">Liens utiles</a>
+            <a href="#title-utile" id="title-utile">' . $translations["liens"] . '</a>
             <br>
             <a href="https://twitter.com/CordoueWeb"><img src="'.$images.'twitter.webp" alt="Twitter" id="twitter"></a>
         </div>
         <div class="ecole">
-            <a href="#title-ecole" id="title-ecole">Notre école</a>
+            <a href="#title-ecole" id="title-ecole">' . $translations["ecole"] . '</a>
             <br>
             <a href="https://iut.univ-gustave-eiffel.fr/">IUT de Marne-la-Vallée</a>
         </div>
         <div class="mention">
-            <a href="#title-mention" id="title-mention">Mentions légales</a>
+            <a href="#title-mention" id="title-mention">' . $translations["mentions"] . '</a>
             <br>
             <p>© 2022/2023</p>
         </div>

@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION["location"] = "data/pages/";
+include("traduction.inc.php");
 
 $_SESSION['ok'] = false;
 $_SESSION['email'] = null;
@@ -66,14 +67,15 @@ if ( (isset($_POST['email'])) && (isset($_POST['motdepasse'])) && $_POST['email'
     ?>
      <div class='form' style="padding:10vw;">
         <form class="form" style='width:50vw;' action="connexion.php" method="POST">
-            <div>Adresse mail <br><input type="text" name="email" /> <br />
+            <div>
+                <?php echo $translations["mail"] ?><br><input type="text" name="email" /> <br />
             </div>
             <div>
-                Mot de passe <br><input type="password" name="motdepasse" /><br />
+                <?php echo $translations["mdp"] ?> <br><input type="password" name="motdepasse" /><br />
             </div>
-            <input type="submit" name="submit" value="Se connecter" id="submit"/>
+            <input type="submit" name="submit" value="<?php echo $translations["connexion"] ?>" id="submit"/>
         </form>
-        <a href="inscription.php" style="color:white">S'inscrire</a>
+        <a href="<?php echo 'inscription.php?langue='.$langue?>" style="color:white"><?php echo $translations["inscription"] ?></a>
     </div>
 
     <?php 
