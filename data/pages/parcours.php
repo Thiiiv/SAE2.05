@@ -63,7 +63,7 @@ $_SESSION["location"] = "data/pages/";
 
     </section>
     <?php 
-    include('footerPages.inc.html');
+    include('footer.inc.php');
     ?>
 
 <script src="../script/parcours.js"></script>
