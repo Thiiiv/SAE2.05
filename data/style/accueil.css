@@ -24,6 +24,7 @@
   top: 0;
   left: 0;
   background-image: url("../images/fond.png");
+  z-index: -5;
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
@@ -31,7 +32,7 @@
 }
 
 #foreground {
-  z-index: 2;
+  z-index: 0;
   overflow-x: hidden;
   position: fixed;
   height: 90%;
@@ -39,13 +40,16 @@
   width: 100%;
   right: 0;
   left: 0;
+  filter: blur(10px);
 }
 
 #title-behind-img {
   font-size: 10vw;
   font-family: 'Dyno', sans-serif;
+  position: relative;
   z-index: 1;
   margin: 0;
+  text-shadow: 5px 5px 5px black;
 }
 
 @keyframes slide {
