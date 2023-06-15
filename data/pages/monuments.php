@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION["location"] = "data/pages/";
+include("traduction.inc.php");
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -11,7 +12,7 @@ $_SESSION["location"] = "data/pages/";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Monument</title>
+    <title><?php echo $translations["monuments"] ?></title>
     <!-- JS -->
     <script src="../script/barre.js"></script>
     <script src="../script/menulateral.js"></script>
@@ -26,75 +27,56 @@ $_SESSION["location"] = "data/pages/";
 <body>
     <!-- Barre horizontale -->
     <?php 
-    if (!isset($_GET["langue"])) {
         include('header.inc.php');
-    }
-    else {
-        $langue = $_GET["langue"];
-        if ($langue == "fr") {
-            include('header.inc.php');
-        }
-        elseif ($langue == "en") {
-            include('ANGheader.inc.php');
-        }
-    }
     ?>
 
-    <h1>Monuments</h1>
+    <h1><?php echo $translations["monuments"] ?></h1>
     <img class="transition" src="../images/sous_titre.png">
 
     <div class="corps">
 
         <div class="ligne-monuments">
 
-            <a href="monuments/mosquee.php" class="monument">
-                <h3>Mosquée-Cathédrale</h3>
+            <a href="<?php echo 'monuments/mosquee.php?langue=' . $langue;?>" class="monument">
+                <h3><?php echo $translations["cathedrale"] ?></h3>
 
                 <img class="image" src="../images/monuments/mosquee.png">
-                <p>Monument le plus important de Cordoue, elle est la pièce maîtresse du panorama religieux de Cordoue.
-                </p>
+                <p><?php echo $translations["cathedrale_p"] ?></p>
             </a>
 
-            <a href="monuments/medina.php" class="monument">
+            <a href="<?php echo 'monuments/medina.php?langue=' . $langue;?>" class="monument">
 
-                <h3>Medina Azahara</h3>
+                <h3><?php echo $translations["medina"] ?></h3>
                 <img class="image" src="../images/monuments/medina.png">
-                <p>Ville palatiale califale construite à Cordoue au 10ème siècle, elle
-                    représente l'apogée de la civilisation musulmane espagnole.
-                </p>
+                <p><?php echo $translations["medina_p"] ?></p>
             </a>
 
 
-            <a href="monuments/pontromain.php" class="monument">
-                <h3>Pont romain</h3>
+            <a href="<?php echo 'monuments/pontromain.php?langue=' . $langue;?>" class="monument">
+                <h3><?php echo $translations["pont"] ?></h3>
                 <img class="image" src="../images/monuments/pontromain.png">
-                <p>Le pont romain de Cordoue, ou vieux pont, est un monument récemment restauré et d’une grande
-                    importance dans la ville.</p>
+                <p><?php echo $translations["pont_p"] ?></p>
             </a>
         </div>
         <div class="ligne-monuments">
-            <a href="monuments/calahorra.php" class="monument">
-                <h3>Tour de la Calahorra</h3>
+            <a href="<?php echo 'monuments/calahorra.php?langue=' . $langue;?>" class="monument">
+                <h3><?php echo $translations["calahorra"] ?></h3>
                 <img class="image" src="../images/monuments/calahorra.png">
-                <p>La tour de Calahorra est un vestige historique de Cordoue, qui servait autrefois de porte d'entrée à
-                    la ville.
-                </p>
+                <p><?php echo $translations["calahorra_p"] ?></p>
             </a>
 
-            <a href="monuments/alcazar.php" class="monument">
-                <h3>Alcázar</h3>
+            <a href="<?php echo 'monuments/alcazar.php?langue=' . $langue;?>" class="monument">
+                <h3><?php echo $translations["alcazar"] ?></h3>
                 <img class="image" src="../images/monuments/alcazar.png">
-                <p>Construit en 1328, ancienne résidence des dirigeants de Cordoue, puis est devenu une prison jusqu'en
-                    1950.</p>
+                <p><?php echo $translations["alcazar_p"] ?></p>
             </a>
 
 
-            <a href="monuments/templeromain.php" class="monument">
+            <a href="<?php echo 'monuments/templeromain.php?langue=' . $langue;?>" class="monument">
 
-                <h3>Temple Romain</h3>
+                <h3><?php echo $translations["temple"] ?></h3>
                 <img class="image" src="../images/monuments/templeromain.png">
-                <p>Le temple romain de Cordoue est un vestige fascinant de l'architecture romaine antique en Espagne.
-                </p>
+                <p><?php echo $translations["temple_p"] ?></p>
             </a>
         </div>
 
