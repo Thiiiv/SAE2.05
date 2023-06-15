@@ -43,7 +43,7 @@ include("traduction.inc.php");
     $titleTable = "titre";
     $subtitleTable = "sous_titre";
     $descriptionTable = "description";
-    if ($langue = "en"){
+    if ($_GET['langue'] == "en"){
         $titleTable = "title";
         $subtitleTable = "subtitle";
         $descriptionTable = "descriptionen";

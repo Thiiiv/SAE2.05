@@ -23,7 +23,7 @@ include("../traduction.inc.php");
         ?>
 
     <div class="flexboxcolonne">
-        <div id="fond" style="background-image: url('../../images/monuments/templeromainfond.jpg');">>
+        <div id="fond" style="background-image: url('../../images/monuments/templeromainfond.jpg');">
             <a id="boutonretour" href="<?php echo '../monuments.php?langue=' . $langue;?>">
                 <p>◄ Monuments</p>
             </a>
