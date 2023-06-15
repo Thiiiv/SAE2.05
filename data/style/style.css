@@ -116,7 +116,7 @@ body {
 .lien {
     color: white
 }
-.retour {
+#retour {
     z-index: 5;
     position: sticky;
     bottom: 8vh;
@@ -441,14 +441,6 @@ nav .logo h1 {
 	color: rgb(255, 255, 255);
 }
 
-/* Test */
-.nav-container #check {
-    display: none;
-}
-.hamburger-lines {
-    display: none;
-}
-
 .menu {
     position: fixed;
     top: 0;
@@ -493,7 +485,7 @@ nav .logo h1 {
     font-size: 0.9rem;
     font-weight: bold;
 }
-.menu .liens .lien:hover {
+.menu .liens .lien:not(.langues .langue .lien):hover {
     animation: box-shadow 1s forwards;
     transform: scale(1.1);
     background-color: var(--main-bg-color2);
@@ -505,7 +497,7 @@ nav .logo h1 {
     height: 5vh;
     width: auto;
 }
-.menu .liens img {
+.menu .liens img:not(.langue img) {
     filter: brightness(3);
     height: 3.5vh;
 }
@@ -519,20 +511,22 @@ nav .logo h1 {
     transform: scale(1.1);
 }
 
-.menu .liens .langues, .menu .liens .infos {
+.menu .liens .langues {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.menu .liens .langue, .menu .liens .info {
+.menu .liens .langue {
     position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     top: 100%;
-    left: 0; 
     display: none;
-    width: auto;
+    width: max-content;
     padding: 10px;
     background-color: #f9f9f9;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
@@ -541,7 +535,7 @@ nav .logo h1 {
 
 .menu .liens .langues:hover .langue, .menu .liens .infos:hover .info {
     display: block;
-    margin-top: 0.25vh;
+    margin-top: 0.30vh;
     border-radius: 25px;
 }
 
@@ -566,6 +560,67 @@ nav .logo h1 {
     background-color: var(--main-bg-color2);
     color: white;
     transform: scale(1.1);
+}
+.menu-btn:hover {
+    background-color: #f4f4f4;
+}
+.menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    right: 0;
+    padding: 3.5vh 6vw;
+    position: relative;
+    user-select: none;
+  }
+  .menu-icon .navicon {
+    background: white;
+    display: block;
+    height: 0.3vh;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 6vw;
+  }
+.menu-icon .navicon:before,
+.menu-icon .navicon:after {
+  background: white;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+.menu-icon .navicon:before {
+    top: 5px;
+}
+.menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* menu btn */
+
+.menu-btn {
+    display: none;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+.menu-icon {
+    display: none;
 }
   
 
@@ -602,6 +657,7 @@ nav .logo h1 {
         width: 5px;
     }
 	.footer {
+        position: inherit;
 		justify-content: center;
         width: 100%;
         bottom: 0;
@@ -618,7 +674,7 @@ nav .logo h1 {
         position: relative;
         z-index: 20;
     }
-    .nav-container #check {
+    .menu #check {
         display: block;
     }
 
@@ -631,46 +687,8 @@ nav .logo h1 {
         font-size: 2rem;
         z-index: 101;
     }
-    .container {
-        max-width: 1050px;
-        width: 90%;
-        margin: auto;
-      }
       
-      .nav-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 62px;
-      }
-      
-       /*.menu-items {
-        display: flex;
-      }*/
-      
-       .nav-container li {
-        list-style: none;
-      }
-      
-       .nav-container a {
-        text-decoration: none;
-        color: #ffffff;
-        font-weight: 500;
-        font-size: 1.2rem;
-        padding: 0.7rem;
-      }
-      
-       .nav-container a:hover{
-          font-weight: bolder;
-      }
-      
-      .nav-container {
-        display: block;
-        position: relative;
-        height: 60px;
-      }
-      
-      .nav-container .checkbox {
+      .menu .checkbox {
         position: absolute;
         display: block;
         height: 32px;
@@ -682,7 +700,7 @@ nav .logo h1 {
         cursor: pointer;
       }
       
-      .nav-container .hamburger-lines {
+      .menu .hamburger-lines {
         display: block;
         height: 26px;
         width: 32px;
@@ -695,7 +713,7 @@ nav .logo h1 {
         justify-content: space-between;
       }
       
-      .nav-container .hamburger-lines .line {
+      .menu .hamburger-lines .line {
         display: block;
         height: 4px;
         width: 100%;
@@ -703,16 +721,16 @@ nav .logo h1 {
         background: #ffffff;
       }
       
-      .nav-container .hamburger-lines .line1 {
+      .menu .hamburger-lines .line1 {
         transform-origin: 0% 0%;
         transition: transform 0.4s ease-in-out;
       }
       
-      .nav-container .hamburger-lines .line2 {
+      .menu .hamburger-lines .line2 {
         transition: transform 0.2s ease-in-out;
       }
       
-      .nav-container .hamburger-lines .line3 {
+      .menu .hamburger-lines .line3 {
         transform-origin: 0% 100%;
         transition: transform 0.4s ease-in-out;
       }
@@ -744,21 +762,99 @@ nav .logo h1 {
         font-weight: 500;
       }
       
-      .nav-container input[type="checkbox"]:checked ~ .menu-items {
+      .menu input[type="checkbox"]:checked ~ .menu-items {
         transform: translateX(0);
       }
       
-      .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+      .menu input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
         transform: rotate(45deg);
       }
       
-      .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+      .menu input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
         transform: scaleY(0);
       }
       
-      .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+      .menu input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
         transform: rotate(-45deg);
       }
+      .menu {
+        margin-top: 6vh;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: space-evenly;
+        transform: translateX(-100%);
+        transition: transform 0.5s;
+      }
+      .menu .accueil {
+        text-align: center;
+      }
+      .menu .accueil img {
+        width: 50%;
+        height: auto;
+      }
+      .menu .liens {
+        flex-direction: column;
+      }
+      .menu .liens .lien {
+        font-size: 1.5rem;
+      }
+      .menu .liens .langues {
+        text-align: center;
+      }
+      .menu .liens .langues .lien {
+        display: none;
+      }
+      .menu .liens .langues .langue {
+        display: block;
+        flex-direction: column;
+        margin: auto;
+        position: relative;
+      }
+      .menu .liens .langues:hover .langue {
+        display: block;
+        margin-top: 0;
+      }
+      .menu .liens .langue {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        top: 0;
+        left: 0; 
+        right: 0;
+        width: auto;
+        padding: 0 100px;
+        background-color: transparent;
+        box-shadow: none;
+        z-index: 1;
+        border-radius: 30px;
+    }
+    .menu .liens .langues .langue a {
+        position: relative;
+        display: block;
+        text-align: center;
+        border-radius: 50px;
+        padding: 0 0;
+        margin: 3vh 0;
+        width: fit-content;
+        transition: transform 1s;
+    }
+    .menu .liens .lien {
+        margin: 2vh 0;
+    }
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: 10vw;
+        margin-top: 0.5vh;
+        z-index: 100;
+    }
+    .menu-btn:checked ~ .menu {
+        transform: translateX(0);
+    }
 }
 
 /*-- Fin média --*/
