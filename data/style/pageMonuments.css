@@ -1,12 +1,4 @@
 /* Titre */
-h1 {
-    margin-top: 15vh;
-    text-align: center;
-    width: 100%;
-    padding-top: 5vh;
-    font-size: 100px;
-    user-select: none;
-}
 
 /* Corps de la page (flexbox colonne qui prend les deux lignes)*/
 .corps {
@@ -94,15 +86,7 @@ h3 {
     float: right;
 }
 
-/* Image en dessous du titre */
-.transition {
-    width: 50vw;
-    height: auto;
-    display: flex;
-    margin-right: auto;
-    margin-left: auto;
-    padding-bottom: 8vh;
-}
+
 
 @media screen and (max-width:901px) {
     .ligne-monuments {

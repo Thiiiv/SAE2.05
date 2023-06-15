@@ -206,6 +206,28 @@ nav .logo h1 {
     background: linear-gradient(to right,var(--main-bg-color2), var(--main-bg-color));
 }
 
+/* Titre */
+h1 {
+    margin-top: 15vh;
+    text-align: center;
+    width: 100%;
+    padding-top: 5vh;
+    font-size: 100px;
+    user-select: none;
+}
+
+
+/* Image en dessous du titre */
+.transition {
+    width: 50vw;
+    height: auto;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 8vh;
+}
+
+
 /*-- Début bouton et menu --*/
 
 .menu-items button {
