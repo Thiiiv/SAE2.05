@@ -63,7 +63,7 @@ include("../traduction.inc.php");
     </div>
     
     <?php 
-        include('footer.inc.php');
+        include('../footer.inc.php');
     ?>
 </body>
 </html>
