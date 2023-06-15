@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION["location"] = "root";
+include("data/pages/traduction.inc.php");
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -11,7 +12,7 @@ $_SESSION["location"] = "root";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Cordoue</title>
+    <title><?php echo $translations["Cordoue"];?></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -29,29 +30,18 @@ $_SESSION["location"] = "root";
 <body>
     
     <?php 
-    if (!isset($_GET["langue"])) {
-        include('data/pages/header.inc.php');
-    }
-    else {
-        $langue = $_GET["langue"];
-        if ($langue == "fr") {
-            include('data/pages/header.inc.php');
-        }
-        elseif ($langue == "en") {
-            include('data/pages/ANGheader.inc.php');
-        }
-    }
+    include('data/pages/header.inc.php');
     ?>
 
     <!-- Image -->
     <div class="accueil-content">
-        <span id="title-behind-img">Cordoue</span>
+        <span id="title-behind-img"><?php echo $translations["Cordoue"];?></span>
         <img src="data/images/foreground3.webp" alt="foreground" id="foreground" />
     </div>
     <!-- Contenu -->
     <section class="page-content">
         <section class="content">
-            <h1>Histoire</h1>
+            <h1><?php echo $translations["histoire"];?></h1>
             <br>
             <p>
                 Cordoue est une ville située en Andalousie (région du sud de l'Espagne), et la capitale de la province
@@ -77,7 +67,7 @@ $_SESSION["location"] = "root";
                 Depuis le paléolithique, la province de Cordoue est marquée par la présence de l’homme. Tartessiens et
                 Orétans se disputèrent ces terres et l’exploitation de ses mines de fer, de plomb et de cuivre.
             </p>
-            <p><a href="histoire.php">En savoir plus</a></p>
+            <p><a href="data/pages/histoire.php">En savoir plus</a></p>
             <br>
         </section>
     </section>
@@ -127,7 +117,7 @@ $_SESSION["location"] = "root";
     
     
     <?php 
-    include('data/pages/footerIndex.inc.html');
+    include('data/pages/footer.inc.php');
     ?>
     
 </body>
