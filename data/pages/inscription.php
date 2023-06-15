@@ -77,7 +77,7 @@ if ( (!isset($_POST['email'])) || (!isset($_POST['motdepasse'])) || $_POST['emai
     </div>
 
     <?php 
-    include('footerPages.inc.html');
+    include('footer.inc.php');
     ?>
     
 </body>

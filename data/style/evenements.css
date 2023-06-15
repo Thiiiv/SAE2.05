@@ -57,7 +57,7 @@ border-radius: 10px 10px 10px 10px;
 
         .photoevent:hover {
             transition: 0.5s;
-            opacity: 0.2;
+            opacity: 0.1;
         }
 
         .boite .texteevent {
