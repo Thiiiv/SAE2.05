@@ -1,6 +1,7 @@
 <?php
 session_start();
 $_SESSION["location"] = "data/pages/";
+include("traduction.inc.php");
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -15,7 +16,7 @@ $_SESSION["location"] = "data/pages/";
     <link rel="stylesheet" href="../style/monuments.css" />
     <link rel="stylesheet" href="../style/histoire.css" />
     <link rel="shotcut icon" href="../images/favicon.png">
-    <title>Histoire</title>
+    <title><?php echo $translations[""]?> </title>
 </head>
 
 <body>
