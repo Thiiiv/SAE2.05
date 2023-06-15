@@ -55,7 +55,7 @@ include("../traduction.inc.php");
     <img class="transition titre" src="../../images/sous_titre.png">
     <div class="container-page">
         <div class="container-event">
-            <img class="image" src="../../images/histoire/espagnol/ferdinandIII.jpg" alt="Ferdinand III de Castille">
+            <img class="image" src="../../images/histoire/espagnol/ferdinandIII.webp" alt="Ferdinand III de Castille">
             <div class="container-texts">
                 <h3><?php echo $translations["reconquista"] ?></h3>
                 <img class="transition reverse-transition" src="../../images/sous_titre.png">
@@ -87,7 +87,7 @@ include("../traduction.inc.php");
             </div>
         </div>
         <div class="container-event">
-            <img class="image" src="../../images/histoire/espagnol/universite.jpg" alt="Université de Cordoue">
+            <img class="image" src="../../images/histoire/espagnol/universite.webp" alt="Université de Cordoue">
             <div class="container-texts">
                 <h3><?php echo $translations["ouverture"] ?></h3>
                 <img class="transition reverse-transition" src="../../images/sous_titre.png">
