@@ -35,21 +35,20 @@ include("data/pages/traduction.inc.php");
 
     <!-- Image -->
     <div class="accueil-content">
-        <span id="title-behind-img"><?php echo $translations["Cordoue"] ?></span>
-        <img src="data/images/foreground3.webp" alt="foreground" id="foreground" />
+        <span><?php echo $translations["Cordoue"];?></span>
     </div>
+    <img src="data/images/background.jpg" alt="background" id="background" /> 
     <!-- Contenu -->
-    <section class="page-content">
-        <section class="content">
+    <div class="page">
+        <div class="content">
             <h1><?php echo $translations["histoire"] ?></h1>
             <br>
             <p><?php echo $translations["histoire_p"] ?></p>
             <p><a href="data/pages/histoire.php"><?php echo $translations["savoir_plus"] ?></a></p>
             <br>
-        </section>
-    </section>
-    <section class="page-content">
-        <section class="content">
+        </div>
+    </div>
+    <div class="page">
             <h1><?php echo $translations["actualite"] ?></h1>
             <br>
             <div class="fil_twitter">
@@ -59,34 +58,12 @@ include("data/pages/traduction.inc.php");
             </div>
             <br>
             <p><?php echo $translations["actualite_p"] ?></p>
-            <!-- Diapo -->
-            <br>
-            <div id="slideshow">
-                <div class="slide-wrapper">
-                    <div class="slide">
-                        <h1><img src="data/images/patio1.webp" /></h1>
-                    </div>
-                    <div class="slide">
-                        <h1><img src="data/images/patio2.webp" /></h1>
-                    </div>
-                    <div class="slide">
-                        <h1><img src="data/images/patio3.webp" /></h1>
-                    </div>
-                    <div class="slide">
-                        <h1><img src="data/images/patio4.webp" /></h1>
-                    </div>
-                    <div class="slide">
-                        <h1><img src="data/images/patio5.webp" /></h1>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </section>
-    
-    
+    </div>
+    <footer>
     <?php 
     include('data/pages/footer.inc.php');
     ?>
+    </footer>
     
 </body>
 
